@@ -5,8 +5,13 @@ import Container from './Container';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [activeMobileMenu, setActiveMobileMenu] = useState(null);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
+
+  const toggleMobileMenu = (menuName) => {
+    setActiveMobileMenu(activeMobileMenu === menuName ? null : menuName);
+  };
 
   // Pages that don't have a dark hero image at the top need dark text immediately
   const lightNavbarRoutes = ['/support', '/sustainability'];
@@ -22,6 +27,7 @@ const Navbar = () => {
 
   useEffect(() => {
     setIsOpen(false);
+    setActiveMobileMenu(null);
   }, [location.pathname]);
 
   const navLinks = [
@@ -170,7 +176,10 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <button 
             className={`md:hidden ${(isScrolled || isLightNavbarRoute) ? 'text-slate-800' : 'text-white'} focus:outline-none`}
-            onClick={() => setIsOpen(!isOpen)}
+            onClick={() => {
+              setIsOpen(!isOpen);
+              if (isOpen) setActiveMobileMenu(null);
+            }}
           >
             {isOpen ? <FiX size={24} className="text-slate-800" /> : <FiMenu size={24} />}
           </button>
@@ -195,6 +204,16 @@ const Navbar = () => {
                 >
                   {link.name}
                 </a>
+              ) : link.children ? (
+                <button 
+                  className={`flex justify-between items-center w-full text-left text-base font-semibold uppercase tracking-wider p-2 ${
+                    location.pathname.startsWith(link.path) && link.path !== '/' ? 'text-[var(--color-siemens-primary)]' : 'text-slate-700'
+                  }`}
+                  onClick={() => toggleMobileMenu(link.name)}
+                >
+                  {link.name}
+                  <svg className={`w-4 h-4 transition-transform duration-300 ${activeMobileMenu === link.name ? 'rotate-180 text-[var(--color-siemens-primary)]' : 'text-slate-400'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
               ) : (
                 <Link 
                   to={link.path}
@@ -209,29 +228,31 @@ const Navbar = () => {
               
               {/* Mobile Submenu Items */}
               {link.children && (
-                <div className="pl-4 mt-1 space-y-1">
-                  {link.children.map((child) => (
-                    child.external ? (
-                      <a 
-                        key={child.name} 
-                        href={child.path} 
-                        target="_blank" 
-                        rel="noopener noreferrer" 
-                        className="block py-2 text-sm text-slate-500 hover:text-[var(--color-siemens-primary)]"
-                      >
-                        - {child.name}
-                      </a>
-                    ) : (
-                      <Link 
-                        key={child.name} 
-                        to={child.path} 
-                        className="block py-2 text-sm text-slate-500 hover:text-[var(--color-siemens-primary)]"
-                        onClick={() => setIsOpen(false)}
-                      >
-                        - {child.name}
-                      </Link>
-                    )
-                  ))}
+                <div className={`overflow-hidden transition-all duration-300 ${activeMobileMenu === link.name ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
+                  <div className="pl-4 mt-1 space-y-1 pb-2">
+                    {link.children.map((child) => (
+                      child.external ? (
+                        <a 
+                          key={child.name} 
+                          href={child.path} 
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          className="block py-2 text-sm text-slate-500 hover:text-[var(--color-siemens-primary)]"
+                        >
+                          - {child.name}
+                        </a>
+                      ) : (
+                        <Link 
+                          key={child.name} 
+                          to={child.path} 
+                          className="block py-2 text-sm text-slate-500 hover:text-[var(--color-siemens-primary)]"
+                          onClick={() => setIsOpen(false)}
+                        >
+                          - {child.name}
+                        </Link>
+                      )
+                    ))}
+                  </div>
                 </div>
               )}
             </div>

@@ -1,21 +1,23 @@
 import React from 'react';
 import Container from '../layout/Container';
 import SectionHeader from '../common/SectionHeader';
-import { FiCheckCircle, FiLayers, FiDatabase, FiCpu, FiTrendingUp } from 'react-icons/fi';
+import { FiCheckCircle, FiLayers, FiDatabase, FiCpu, FiTrendingUp, FiSettings } from 'react-icons/fi';
 import { motion } from 'framer-motion';
 
 const capabilities = [
   { title: "Digital Twin Strategy", desc: "Develop Digital Twin frameworks and transformation roadmaps.", icon: FiTrendingUp },
   { title: "BIM & Data Foundation", desc: "Build standardized data environments and asset information models.", icon: FiDatabase },
   { title: "Platform Implementation", desc: "Deploy scalable Digital Twin platforms integrated with IoT.", icon: FiLayers },
-  { title: "AI & Analytics", desc: "Generate predictive insights and operational intelligence.", icon: FiCpu }
+  { title: "AI & Analytics", desc: "Generate predictive insights and operational intelligence.", icon: FiCpu },
+  { title: "Operations & Lifecycle", desc: "Digital Twin for facilities O&M and performance monitoring.", icon: FiSettings }
 ];
 
 const whyTdte = [
-  "Industry-focused Digital Twin expertise",
-  "Vendor-neutral technology approach",
-  "Integration across the entire asset lifecycle",
-  "Scalable solutions for enterprise environments"
+  "Vendor-neutral approach aligned with open standards",
+  "Deep BIM + Digital Twin expertise across project lifecycles",
+  "Industry-focused solutions, not generic demos",
+  "Measurable ROI driven by operational outcomes",
+  "Scalable from pilot to enterprise level"
 ];
 
 const Features = () => {
