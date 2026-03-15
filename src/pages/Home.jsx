@@ -5,6 +5,8 @@ import Features from '../components/sections/Features';
 import Testimonials from '../components/sections/Testimonials';
 import CTA from '../components/common/CTA';
 import Button from '../components/common/Button';
+import heroImg from '../assets/images/hero.jpg';
+import engineersImg from '../assets/images/engineers.jpg';
 
 const Home = () => {
   useEffect(() => {
@@ -16,7 +18,7 @@ const Home = () => {
       <Hero 
         title="Building the Future with Digital Twins, AI, and Intelligent Infrastructure"
         subtitle="The Digital Twin Experts (TDTE) helps organizations transform physical assets into intelligent digital ecosystems using Digital Twins, AI, and advanced data technologies."
-        image="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80"
+        image={heroImg}
         alignment="left"
       >
         <Button to="/services" variant="primary" size="lg">Explore Industries</Button>
@@ -55,7 +57,7 @@ const AboutOverviewPreview = () => (
           <Button to="/about" variant="text" size="lg" className="px-0">Learn more about our vision</Button>
         </div>
         <div className="md:w-1/2 w-full h-80 bg-gray-100 relative overflow-hidden group">
-          <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&q=80" alt="Engineers collaborating" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+          <img src={engineersImg} alt="Engineers collaborating" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
         </div>
       </div>
     </div>

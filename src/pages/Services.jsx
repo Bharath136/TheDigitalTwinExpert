@@ -5,6 +5,11 @@ import SectionHeader from '../components/common/SectionHeader';
 import Container from '../components/layout/Container';
 import CTA from '../components/common/CTA';
 import { FiCpu, FiDatabase, FiLock, FiSettings } from 'react-icons/fi';
+import earthImg from '../assets/images/earth.jpg';
+import securityImg from '../assets/images/security.jpg';
+import officeImg from '../assets/images/office.jpg';
+import serversImg from '../assets/images/servers.jpg';
+import labImg from '../assets/images/lab.jpg';
 
 const Services = () => {
   useEffect(() => {
@@ -16,7 +21,7 @@ const Services = () => {
       <Hero 
         title="Industries We Support"
         subtitle="Each industry solution combines digital engineering, data analytics, and intelligent monitoring platforms."
-        image="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80"
+        image={earthImg}
         height="h-[60vh]"
       />
       
@@ -32,7 +37,7 @@ const Services = () => {
               title="Digital Twin Strategy & Roadmaps"
               description="Develop Digital Twin frameworks and transformation roadmaps tailored to your organizational goals. We assess your Digital Twin readiness, define a clear business case and ROI, and establish an Enterprise Digital Twin architecture."
               icon={FiCpu}
-              image="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80"
+              image={securityImg}
               reverse={false}
               items={['Readiness Assessment', 'ROI Definition', 'Enterprise Architecture']}
             />
@@ -41,7 +46,7 @@ const Services = () => {
               title="BIM & Data Foundation"
               description="Build standardized data environments and asset information models (AIM). Our approach ensures seamless alignment with ISO 19650 and open standards, establishing a single source of truth for all asset information."
               icon={FiDatabase}
-              image="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80"
+              image={officeImg}
               reverse={true}
               items={['BIM Standards', 'ISO 19650 Alignment', 'Asset Information Models']}
             />
@@ -50,7 +55,7 @@ const Services = () => {
               title="Platform Implementation & Integration"
               description="Deploy scalable Digital Twin platforms via Autodesk Tandem, ACC, and custom IoT platforms. We integrate directly with ERP, CMMS, BMS, and SCADA via cloud-based and scalable architectures."
               icon={FiSettings}
-              image="https://images.unsplash.com/photo-1563986768494-4dee2763ff0f?auto=format&fit=crop&q=80"
+              image={serversImg}
               reverse={false}
               items={['IoT Integration', 'ERP & SCADA connectivity', 'Cloud Architectures']}
             />
@@ -59,7 +64,7 @@ const Services = () => {
               title="AI & Advanced Analytics"
               description="Generate predictive insights and operational intelligence. Leverage AI-driven insights and simulations alongside predictive maintenance models and decision intelligence dashboards to outmaneuver operational risks."
               icon={FiCpu}
-              image="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80"
+              image={labImg}
               reverse={true}
               items={['Predictive Maintenance', 'AI Simulations', 'Intelligence Dashboards']}
             />
@@ -68,7 +73,7 @@ const Services = () => {
               title="Operations & Lifecycle Enablement"
               description="Empower your facilities and O&M with a continuous improvement framework. Monitor asset performance continuously and build a persistent Digital Twin tailored exactly for long-term facilities management."
               icon={FiLock}
-              image="https://images.unsplash.com/photo-1542744094-3a31f272c490?auto=format&fit=crop&q=80"
+              image={officeImg}
               reverse={false}
               items={['Facilities O&M', 'Performance Monitoring', 'Continuous Improvement']}
             />

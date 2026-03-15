@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import Hero from '../components/sections/Hero';
 import ContactSection from '../components/sections/ContactSection';
 import CTA from '../components/common/CTA';
+import contactHeroImg from '../assets/images/contact-hero.jpg';
 
 const Contact = () => {
   useEffect(() => {
@@ -13,7 +14,7 @@ const Contact = () => {
       <Hero 
         title="Get in Touch"
         subtitle="Whether you are exploring Digital Twin adoption or seeking expert guidance, our team is ready to assist."
-        image="https://images.unsplash.com/photo-1516387938699-a93567ec168e?auto=format&fit=crop&q=80"
+        image={contactHeroImg}
         height="h-[50vh]"
       />
       

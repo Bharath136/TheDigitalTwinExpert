@@ -3,30 +3,33 @@ import Container from '../layout/Container';
 import SectionHeader from '../common/SectionHeader';
 import Grid from '../common/Grid';
 import { FiLinkedin, FiTwitter } from 'react-icons/fi';
+import leadership1 from '../../assets/images/leadership1.jpg';
+import leadership2 from '../../assets/images/leadership2.jpg';
+import leadership3 from '../../assets/images/leadership3.jpg';
 
 const teamMembers = [
   {
     name: 'Alexandra Wright',
     role: 'Chief Executive Officer',
-    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80',
+    image: leadership2,
     bio: 'Former VP at tech giant, driving our strategic vision for 10 years.'
   },
   {
     name: 'David Chen',
     role: 'Chief Technology Officer',
-    image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80',
+    image: leadership3,
     bio: 'Pioneering our scalable cloud architectures and AI integrations.'
   },
   {
     name: 'Sophia Patel',
     role: 'Head of Operations',
-    image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80',
+    image: leadership1,
     bio: 'Ensuring global delivery excellence and customer success.'
   },
   {
     name: 'James Harrison',
     role: 'VP of Cybersecurity',
-    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80',
+    image: leadership2,
     bio: 'Securing enterprise infrastructure against advanced threats.'
   }
 ];

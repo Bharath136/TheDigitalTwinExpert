@@ -3,6 +3,10 @@ import Container from '../layout/Container';
 import SectionHeader from '../common/SectionHeader';
 import Grid from '../common/Grid';
 import { FiCheckCircle } from 'react-icons/fi';
+import officeImg from '../../assets/images/office.jpg';
+import teamworkImg from '../../assets/images/teamwork.jpg';
+import strategyImg from '../../assets/images/strategy.jpg';
+import earthImg from '../../assets/images/earth.jpg';
 
 const useCases = [
   "Smart Buildings & Campuses",
@@ -63,19 +67,19 @@ const AboutOverview = () => {
               
               <div className="space-y-6">
                 <img 
-                  src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&q=80" 
+                  src={officeImg} 
                   alt="Office" 
                   className="w-full h-48 object-cover rounded-sm shadow-md"
                 />
                 <img 
-                  src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&q=80" 
+                  src={teamworkImg} 
                   alt="Teamwork" 
                   className="w-full h-64 object-cover rounded-sm shadow-md"
                 />
               </div>
               <div className="space-y-6 pt-12">
                 <img 
-                  src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80" 
+                  src={strategyImg} 
                   alt="Strategy" 
                   className="w-full h-64 object-cover rounded-sm shadow-md"
                 />
@@ -92,7 +96,7 @@ const AboutOverview = () => {
 
       {/* Global Impact / Stats */}
       <section className="py-20 bg-[var(--color-siemens-secondary)] relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80')] opacity-10 bg-cover bg-center mix-blend-overlay" />
+        <div className={`absolute inset-0 opacity-10 bg-cover bg-center mix-blend-overlay`} style={{ backgroundImage: `url(${earthImg})` }} />
         <Container className="relative z-10">
           <Grid columns={4} gap={8} className="text-center">
             {stats.map((stat, index) => (

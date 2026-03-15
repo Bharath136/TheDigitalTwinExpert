@@ -5,7 +5,7 @@ export const contactData = {
     country: "United States"
   },
   phone: {
-    display: "+1 (234) 567-890",
+    display: "+1 (234) 567-891",
     value: "+1234567890",
     hours: "Mon-Fri from 8am to 5pm"
   },
