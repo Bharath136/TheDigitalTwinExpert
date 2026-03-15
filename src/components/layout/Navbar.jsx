@@ -188,37 +188,37 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div 
-        className={`md:hidden absolute top-full left-0 w-full bg-white shadow-lg transition-transform duration-300 origin-top overflow-y-auto max-h-[85vh] ${
+        className={`md:hidden absolute top-full left-0 w-full bg-white shadow-xl border-t border-gray-100 transition-transform duration-300 origin-top overflow-y-auto max-h-[85vh] ${
           isOpen ? 'scale-y-100 opacity-100' : 'scale-y-0 opacity-0'
         }`}
       >
-        <div className="px-4 pt-4 pb-6 flex flex-col gap-2">
+        <div className="px-6 pt-4 pb-8 flex flex-col gap-1">
           {navLinks.map((link) => (
-            <div key={link.name} className="border-b border-gray-100 last:border-0 pb-2 mb-2">
+            <div key={link.name} className="border-b border-gray-100 last:border-0">
               {link.path.startsWith('http') ? (
                 <a 
                   href={link.path} 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="block text-base font-semibold uppercase tracking-wider p-2 text-slate-700"
+                  className="block text-sm font-bold uppercase tracking-widest py-5 text-slate-800"
                 >
                   {link.name}
                 </a>
               ) : link.children ? (
                 <button 
-                  className={`flex justify-between items-center w-full text-left text-base font-semibold uppercase tracking-wider p-2 ${
-                    location.pathname.startsWith(link.path) && link.path !== '/' ? 'text-[var(--color-siemens-primary)]' : 'text-slate-700'
+                  className={`flex justify-between items-center w-full text-left text-sm font-bold uppercase tracking-widest py-5 transition-colors duration-300 ${
+                    location.pathname.startsWith(link.path) && link.path !== '/' ? 'text-[var(--color-siemens-primary)]' : 'text-slate-800'
                   }`}
                   onClick={() => toggleMobileMenu(link.name)}
                 >
                   {link.name}
-                  <svg className={`w-4 h-4 transition-transform duration-300 ${activeMobileMenu === link.name ? 'rotate-180 text-[var(--color-siemens-primary)]' : 'text-slate-400'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
+                  <svg className={`w-5 h-5 transition-transform duration-300 ${activeMobileMenu === link.name ? 'rotate-180 text-[var(--color-siemens-primary)]' : 'text-slate-400'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
                 </button>
               ) : (
                 <Link 
                   to={link.path}
-                  className={`flex justify-between items-center text-base font-semibold uppercase tracking-wider p-2 ${
-                    location.pathname.startsWith(link.path) && link.path !== '/' ? 'text-[var(--color-siemens-primary)]' : 'text-slate-700'
+                  className={`flex justify-between items-center text-sm font-bold uppercase tracking-widest py-5 transition-colors duration-300 ${
+                    location.pathname.startsWith(link.path) && link.path !== '/' ? 'text-[var(--color-siemens-primary)]' : 'text-slate-800'
                   }`}
                   onClick={() => setIsOpen(false)}
                 >
@@ -228,8 +228,8 @@ const Navbar = () => {
               
               {/* Mobile Submenu Items */}
               {link.children && (
-                <div className={`overflow-hidden transition-all duration-300 ${activeMobileMenu === link.name ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
-                  <div className="pl-4 mt-1 space-y-1 pb-2">
+                <div className={`overflow-hidden transition-all duration-300 ${activeMobileMenu === link.name ? 'max-h-[500px] opacity-100 mb-4' : 'max-h-0 opacity-0'}`}>
+                  <div className="pl-4 border-l-2 border-gray-100 ml-2 mt-1 flex flex-col gap-1">
                     {link.children.map((child) => (
                       child.external ? (
                         <a 
@@ -237,18 +237,18 @@ const Navbar = () => {
                           href={child.path} 
                           target="_blank" 
                           rel="noopener noreferrer" 
-                          className="block py-2 text-sm text-slate-500 hover:text-[var(--color-siemens-primary)]"
+                          className="block py-3 pl-4 text-sm font-medium text-slate-600 hover:text-[var(--color-siemens-primary)] hover:bg-sky-50 rounded-r-md transition-all"
                         >
-                          - {child.name}
+                          {child.name}
                         </a>
                       ) : (
                         <Link 
                           key={child.name} 
                           to={child.path} 
-                          className="block py-2 text-sm text-slate-500 hover:text-[var(--color-siemens-primary)]"
+                          className="block py-3 pl-4 text-sm font-medium text-slate-600 hover:text-[var(--color-siemens-primary)] hover:bg-sky-50 rounded-r-md transition-all"
                           onClick={() => setIsOpen(false)}
                         >
-                          - {child.name}
+                          {child.name}
                         </Link>
                       )
                     ))}
@@ -258,10 +258,10 @@ const Navbar = () => {
             </div>
           ))}
           
-          <div className="mt-4 px-2">
+          <div className="mt-6">
             <Link 
               to="/contact"
-              className="text-center block w-full px-5 py-3 rounded-sm font-semibold bg-[var(--color-siemens-primary)] text-white hover:bg-sky-600"
+              className="text-center block w-full px-5 py-3.5 rounded-sm font-bold tracking-wide uppercase text-sm bg-[var(--color-siemens-primary)] text-white hover:bg-sky-600 shadow-md transition-all"
               onClick={() => setIsOpen(false)}
             >
               Contact Us
