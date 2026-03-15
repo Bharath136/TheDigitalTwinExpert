@@ -6,7 +6,7 @@ const Hero = ({
   title, 
   subtitle, 
   image, 
-  height = 'h-[80vh]', 
+  height = 'min-h-[100vh] lg:min-h-[80vh]', 
   alignment = 'center',
   children,
   overlayOpacity = 'bg-black/40'
@@ -14,7 +14,7 @@ const Hero = ({
   const isLeftAligned = alignment === 'left';
 
   return (
-    <section className={`relative ${height} flex items-center bg-[var(--color-siemens-secondary)]`}>
+    <section className={`relative ${height} flex items-center pt-32 pb-20 md:py-32 overflow-hidden bg-[var(--color-siemens-secondary)]`}>
       {/* Background Image Output */}
       {image && (
         <div className="absolute inset-0 z-0">

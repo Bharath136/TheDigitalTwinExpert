@@ -19,7 +19,7 @@ const Services = () => {
         title="Industries We Support"
         subtitle="Each industry solution combines digital engineering, data analytics, and intelligent monitoring platforms."
         image={earthImg}
-        height="h-[60vh]"
+        height="min-h-[80vh] lg:min-h-[60vh]"
       />
       
       <ServicesOverview />

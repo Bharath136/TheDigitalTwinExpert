@@ -13,7 +13,7 @@ const About = () => {
         title="Pioneering Digital Infrastructure"
         subtitle="Driven by innovation, expertise, and a commitment to creating a more connected and sustainable world."
         image={earthImg}
-        height="h-[60vh]"
+        height="min-h-[80vh] lg:min-h-[60vh]"
       />
       
       <AboutOverview />

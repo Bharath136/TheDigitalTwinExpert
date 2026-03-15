@@ -12,7 +12,7 @@ const Contact = () => {
         title="Get in Touch"
         subtitle="Whether you are exploring Digital Twin adoption or seeking expert guidance, our team is ready to assist."
         image={contactHeroImg}
-        height="h-[50vh]"
+        height="min-h-[70vh] lg:min-h-[50vh]"
       />
       
       <ContactSection />

@@ -22,7 +22,7 @@ const Products = () => {
         title="Our Products"
         subtitle="TDTE provides specialized Digital Twin solutions designed for different environments."
         image="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80"
-        height="h-[50vh]"
+        height="min-h-[70vh] lg:min-h-[50vh]"
       />
       
       <section className="section-padding bg-[var(--color-siemens-gray-100)]">
