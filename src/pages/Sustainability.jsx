@@ -5,6 +5,7 @@ import Container from '../components/layout/Container';
 import Grid from '../components/common/Grid';
 import CTA from '../components/common/CTA';
 import { FiWind, FiSun, FiActivity, FiGlobe } from 'react-icons/fi';
+import sustainabilityHeroImg from '../assets/images/sustainability/hero.jpg';
 
 const initiatives = [
   { title: "Carbon Tracking", desc: "Real-time auditing of carbon emissions across global facilities and supply chains.", icon: FiActivity },
