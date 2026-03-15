@@ -38,7 +38,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2">
             {/* Minimal Logo similar to Siemens */}
-            <span className={`text-2xl font-bold tracking-tight ${isScrolled ? 'text-[var(--color-siemens-primary)]' : 'text-white md:text-[var(--color-siemens-primary)]'}`}>
+            <span className={`text-2xl font-bold tracking-tight transition-colors duration-300 ${isScrolled ? 'text-[var(--color-siemens-primary)]' : 'text-white'}`}>
               TDTE<span className="text-[var(--color-siemens-accent)]">.</span>
             </span>
           </Link>
@@ -49,10 +49,10 @@ const Navbar = () => {
               <Link 
                 key={link.name} 
                 to={link.path}
-                className={`text-sm font-semibold uppercase tracking-wider transition-colors hover:text-[var(--color-siemens-primary)] ${
+                className={`text-sm font-semibold uppercase tracking-wider transition-colors duration-300 ${
                   location.pathname === link.path 
-                    ? 'text-[var(--color-siemens-primary)]' 
-                    : isScrolled ? 'text-slate-700' : 'text-slate-800'
+                    ? (isScrolled ? 'text-[var(--color-siemens-primary)]' : 'text-white') 
+                    : (isScrolled ? 'text-slate-700 hover:text-[var(--color-siemens-primary)]' : 'text-white/80 hover:text-white')
                 }`}
               >
                 {link.name}
