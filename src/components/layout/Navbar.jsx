@@ -14,7 +14,7 @@ const Navbar = () => {
   };
 
   // Pages that don't have a dark hero image at the top need dark text immediately
-  const lightNavbarRoutes = ['/support', '/sustainability'];
+  const lightNavbarRoutes = ['/support'];
   const isLightNavbarRoute = lightNavbarRoutes.includes(location.pathname);
 
   useEffect(() => {
