@@ -25,14 +25,13 @@ const Navbar = () => {
     { name: 'About', path: '/about' },
     { name: 'Industries', path: '/services' },
     { name: 'Products', path: '/products' },
-    { name: 'Sustainability', path: '/sustainability' },
-    { name: 'Contact', path: '/contact' },
+    { name: 'Sustainability', path: '/sustainability' }
   ];
 
   return (
     <header 
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white shadow-md py-3' : 'bg-transparent py-5'
+        isScrolled ? 'bg-white/90 backdrop-blur-md shadow-sm border-b border-gray-100 py-3' : 'bg-transparent py-5'
       }`}
     >
       <Container>
@@ -61,14 +60,14 @@ const Navbar = () => {
             ))}
           </nav>
 
-          {/* Utility Icons */}
-          <div className="hidden md:flex items-center gap-4 text-slate-700">
-            <button className="hover:text-[var(--color-siemens-primary)] transition-colors">
-              <FiSearch size={20} />
-            </button>
-            <button className="hover:text-[var(--color-siemens-primary)] transition-colors">
-              <FiGlobe size={20} />
-            </button>
+          {/* Contact Highlight Button */}
+          <div className="hidden md:flex items-center gap-4">
+            <Link 
+              to="/contact"
+              className={`px-5 py-2.5 rounded-sm font-semibold text-sm transition-all duration-300 ${isScrolled ? 'bg-[var(--color-siemens-primary)] text-white hover:bg-sky-600 shadow-md' : 'bg-white text-[var(--color-siemens-primary)] hover:bg-gray-100'}`}
+            >
+              Contact Us
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -99,6 +98,12 @@ const Navbar = () => {
               {link.name}
             </Link>
           ))}
+          <Link 
+            to="/contact"
+            className="mt-4 text-center block px-5 py-3 rounded-sm font-semibold bg-[var(--color-siemens-primary)] text-white hover:bg-sky-600"
+          >
+            Contact Us
+          </Link>
         </div>
       </div>
     </header>

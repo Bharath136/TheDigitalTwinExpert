@@ -1,7 +1,7 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { FiTwitter, FiLinkedin, FiYoutube, FiFacebook } from 'react-icons/fi';
 import Container from './Container';
+import { contactData } from '../../config/contactData';
 
 const Footer = () => {
   return (
@@ -51,7 +51,7 @@ const Footer = () => {
             <h4 className="text-white font-semibold mb-6">Contact</h4>
             <ul className="space-y-3 text-sm">
               <li>Global Communications</li>
-              <li className="mt-4"><a href="mailto:info@tdte.com" className="hover:text-white transition-colors text-[var(--color-siemens-primary)]">contact@tdte.com</a></li>
+              <li className="mt-4"><a href={`mailto:${contactData.email.value}`} className="hover:text-white transition-colors text-[var(--color-siemens-primary)]">{contactData.email.display}</a></li>
               <li><Link to="/contact" className="hover:text-white transition-colors text-[var(--color-siemens-primary)]">Get in Touch</Link></li>
             </ul>
           </div>
