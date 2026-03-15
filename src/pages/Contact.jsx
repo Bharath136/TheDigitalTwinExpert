@@ -5,9 +5,6 @@ import CTA from '../components/common/CTA';
 import contactHeroImg from '../assets/images/contact/contact-hero.jpg';
 
 const Contact = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
 
   return (
     <main>

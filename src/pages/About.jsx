@@ -6,9 +6,6 @@ import CTA from '../components/common/CTA';
 import earthImg from '../assets/images/shared/earth.jpg';
 
 const About = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
 
   return (
     <main>
@@ -20,7 +17,9 @@ const About = () => {
       />
       
       <AboutOverview />
-      <TeamSection />
+      <div id="leadership">
+        <TeamSection />
+      </div>
       
       <CTA 
         title="Join Our Growing Ecosystem"

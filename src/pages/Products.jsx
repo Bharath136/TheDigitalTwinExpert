@@ -6,18 +6,15 @@ import Grid from '../components/common/Grid';
 import CTA from '../components/common/CTA';
 
 const products = [
-  { title: "Healthcare Digital Twin", desc: "Operational intelligence, asset tracking, and patient-centric monitoring.", icon: "🏥" },
-  { title: "Citizen Digital Twin", desc: "Connecting citizens to public infrastructure and smart city administration.", icon: "👥" },
-  { title: "Urban Digital Twin", desc: "Smart city planning, traffic optimization, and environmental monitoring.", icon: "🏙️" },
-  { title: "Home Digital Twin", desc: "Residential energy management, automation, and security tracking.", icon: "🏠" },
-  { title: "Industrial Digital Twin", desc: "Factory optimization, supply chain simulation, and predictive maintenance.", icon: "🏭" },
-  { title: "Energy Digital Twin", desc: "Power grid simulation, renewable asset performance, and load balancing.", icon: "⚡" }
+  { id: "healthcare", title: "Healthcare Digital Twin", desc: "Operational intelligence, asset tracking, and patient-centric monitoring.", icon: "🏥" },
+  { id: "citizen", title: "Citizen Digital Twin", desc: "Connecting citizens to public infrastructure and smart city administration.", icon: "👥" },
+  { id: "urban", title: "Urban Digital Twin", desc: "Smart city planning, traffic optimization, and environmental monitoring.", icon: "🏙️" },
+  { id: "home", title: "Home Digital Twin", desc: "Residential energy management, automation, and security tracking.", icon: "🏠" },
+  { id: "industrial", title: "Industrial Digital Twin", desc: "Factory optimization, supply chain simulation, and predictive maintenance.", icon: "🏭" },
+  { id: "energy", title: "Energy Digital Twin", desc: "Power grid simulation, renewable asset performance, and load balancing.", icon: "⚡" }
 ];
 
 const Products = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
 
   return (
     <main>
@@ -37,7 +34,7 @@ const Products = () => {
 
           <Grid columns={3} gap={8}>
             {products.map((prod, i) => (
-              <div key={i} className="bg-white p-8 border-t-4 border-[var(--color-siemens-primary)] shadow-sm hover:shadow-xl transition-all duration-300">
+              <div key={i} id={prod.id} className="bg-white p-8 border-t-4 border-[var(--color-siemens-primary)] shadow-sm hover:shadow-xl transition-all duration-300">
                 <div className="text-4xl mb-6">{prod.icon}</div>
                 <h3 className="text-xl font-bold text-slate-900 mb-4">{prod.title}</h3>
                 <p className="text-slate-600 leading-relaxed">{prod.desc}</p>

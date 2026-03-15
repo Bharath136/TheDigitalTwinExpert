@@ -9,9 +9,6 @@ import heroImg from '../assets/images/home/hero.jpg';
 import engineersImg from '../assets/images/home/engineers.jpg';
 
 const Home = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
 
   return (
     <main>

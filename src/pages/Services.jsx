@@ -12,9 +12,6 @@ import serversImg from '../assets/images/services/servers.jpg';
 import labImg from '../assets/images/services/lab.jpg';
 
 const Services = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
 
   return (
     <main>

@@ -32,20 +32,25 @@ const AboutOverview = () => {
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="heading-section text-slate-900 mb-6">Advancing Digital Twin Adoption Globally</h2>
+              <h2 id="what-is-tdte" className="heading-section text-slate-900 mb-6">Advancing Digital Twin Adoption Globally</h2>
               <div className="h-1 w-24 bg-[var(--color-siemens-primary)] mb-8" />
               <p className="text-body mb-6">
                 <strong>The Digital Twin Experts</strong> is a global platform dedicated to advancing Digital Twin adoption across infrastructure, industry, healthcare, and energy sectors. By combining digital engineering, AI analytics, and infrastructure expertise, we help organizations create intelligent digital models of physical assets.
               </p>
               
-              <h3 className="font-bold text-xl text-slate-800 mb-3 mt-8">Our Vision</h3>
+              <h3 id="vision" className="font-bold text-xl text-slate-800 mb-3 mt-8">Our Vision</h3>
               <p className="text-body mb-6">
                 To create a digitally intelligent world where every asset—from villages to megacities, from hospitals to industries—is powered by living Digital Twins, setting a global benchmark in smart, sustainable, and resilient development.
               </p>
 
-              <h3 className="font-bold text-xl text-slate-800 mb-3 mt-8">Our Mission</h3>
+              <h3 id="mission" className="font-bold text-xl text-slate-800 mb-3 mt-8">Our Mission</h3>
               <p className="text-body mb-8">
                 To upgrade, modernize, and revolutionize industries through digital transformation by deploying AI-powered Digital Twins, BIM, and intelligent data ecosystems across critical sectors, enabling smarter decisions, predictive operations, sustainable assets, and full lifecycle value by integrating design, construction, and operations into a unified digital ecosystem.
+              </p>
+
+              <h3 id="objective" className="font-bold text-xl text-slate-800 mb-3 mt-8">Our Objective</h3>
+              <p className="text-body mb-8">
+                To continuously innovate and deliver best-in-class Digital Twin solutions that directly align with our clients' strategic goals, ensuring measurable ROI, enhanced sustainability, and resilient digital architectures.
               </p>
 
               <div className="bg-[var(--color-siemens-gray-100)] p-6 border-l-4 border-[var(--color-siemens-primary)]">

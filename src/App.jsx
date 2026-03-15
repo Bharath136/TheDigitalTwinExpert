@@ -7,10 +7,13 @@ import Services from './pages/Services';
 import Contact from './pages/Contact';
 import Products from './pages/Products';
 import Sustainability from './pages/Sustainability';
+import Support from './pages/Support';
+import ScrollToHash from './components/common/ScrollToHash';
 
 function App() {
   return (
     <Router>
+      <ScrollToHash />
       <div className="flex flex-col min-h-screen">
         <Navbar />
         <div className="flex-grow">
@@ -21,6 +24,7 @@ function App() {
             <Route path="/products" element={<Products />} />
             <Route path="/sustainability" element={<Sustainability />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/support" element={<Support />} />
           </Routes>
         </div>
         <Footer />

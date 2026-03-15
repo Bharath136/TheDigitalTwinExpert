@@ -7,30 +7,35 @@ import { FiMonitor, FiSettings, FiZap, FiHeart, FiGlobe } from 'react-icons/fi';
 
 const services = [
   {
+    id: 'built-environment',
     icon: FiMonitor,
     title: 'Built Environment & Infrastructure',
     description: 'Smart buildings, cities, airports, transportation, and infrastructure systems.',
-    linkTo: '/services#infrastructure'
+    linkTo: '/services#built-environment'
   },
   {
+    id: 'industrial',
     icon: FiSettings,
     title: 'Industrial & Manufacturing',
     description: 'Factories, production facilities, and industrial operations optimization.',
     linkTo: '/services#industrial'
   },
   {
+    id: 'energy',
     icon: FiZap,
     title: 'Energy & Utilities',
     description: 'Power generation, renewable energy, and intelligent distribution systems.',
     linkTo: '/services#energy'
   },
   {
+    id: 'healthcare',
     icon: FiHeart,
     title: 'Healthcare & Patient Twins',
     description: 'Hospitals, healthcare infrastructure, and operational intelligence.',
     linkTo: '/services#healthcare'
   },
   {
+    id: 'sustainability',
     icon: FiGlobe,
     title: 'Sustainability & Net-Zero',
     description: 'Energy optimization, carbon tracking, and sustainable infrastructure.',
@@ -53,14 +58,15 @@ const ServicesOverview = () => {
 
         <Grid columns={3} gap={6}>
           {services.map((service, index) => (
-            <Card 
-              key={index}
-              icon={service.icon}
-              title={service.title}
-              description={service.description}
-              linkTo={service.linkTo}
-              className="h-full"
-            />
+            <div key={index} id={service.id} className="h-full pt-20 -mt-20">
+              <Card 
+                icon={service.icon}
+                title={service.title}
+                description={service.description}
+                linkTo={service.linkTo}
+                className="h-full shadow-md"
+              />
+            </div>
           ))}
         </Grid>
       </Container>
