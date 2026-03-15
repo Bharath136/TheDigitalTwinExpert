@@ -34,7 +34,7 @@ const Products = () => {
 
           <Grid columns={3} gap={8}>
             {products.map((prod, i) => (
-              <div key={i} id={prod.id} className="bg-white p-8 border-t-4 border-[var(--color-siemens-primary)] shadow-sm hover:shadow-xl transition-all duration-300">
+              <div key={i} id={prod.id} className="bg-white p-8 border-t-4 border-[var(--color-siemens-primary)] shadow-sm hover:shadow-xl transition-all duration-300 scroll-mt-24">
                 <div className="text-4xl mb-6">{prod.icon}</div>
                 <h3 className="text-xl font-bold text-slate-900 mb-4">{prod.title}</h3>
                 <p className="text-slate-600 leading-relaxed">{prod.desc}</p>

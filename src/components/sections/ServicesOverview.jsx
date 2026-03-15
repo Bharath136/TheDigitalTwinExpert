@@ -58,7 +58,7 @@ const ServicesOverview = () => {
 
         <Grid columns={3} gap={6}>
           {services.map((service, index) => (
-            <div key={index} id={service.id} className="h-full pt-20 -mt-20">
+            <div key={index} id={service.id} className="h-full scroll-mt-24">
               <Card 
                 icon={service.icon}
                 title={service.title}
