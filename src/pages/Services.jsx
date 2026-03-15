@@ -5,11 +5,11 @@ import SectionHeader from '../components/common/SectionHeader';
 import Container from '../components/layout/Container';
 import CTA from '../components/common/CTA';
 import { FiCpu, FiDatabase, FiLock, FiSettings } from 'react-icons/fi';
-import earthImg from '../assets/images/earth.jpg';
-import securityImg from '../assets/images/security.jpg';
-import officeImg from '../assets/images/office.jpg';
-import serversImg from '../assets/images/servers.jpg';
-import labImg from '../assets/images/lab.jpg';
+import earthImg from '../assets/images/shared/earth.jpg';
+import securityImg from '../assets/images/services/security.jpg';
+import officeImg from '../assets/images/shared/office.jpg';
+import serversImg from '../assets/images/services/servers.jpg';
+import labImg from '../assets/images/services/lab.jpg';
 
 const Services = () => {
   useEffect(() => {

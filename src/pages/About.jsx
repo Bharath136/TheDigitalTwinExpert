@@ -3,7 +3,7 @@ import Hero from '../components/sections/Hero';
 import AboutOverview from '../components/sections/AboutOverview';
 import TeamSection from '../components/sections/TeamSection';
 import CTA from '../components/common/CTA';
-import earthImg from '../assets/images/earth.jpg';
+import earthImg from '../assets/images/shared/earth.jpg';
 
 const About = () => {
   useEffect(() => {

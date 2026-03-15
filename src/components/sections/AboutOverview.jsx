@@ -3,10 +3,10 @@ import Container from '../layout/Container';
 import SectionHeader from '../common/SectionHeader';
 import Grid from '../common/Grid';
 import { FiCheckCircle } from 'react-icons/fi';
-import officeImg from '../../assets/images/office.jpg';
-import teamworkImg from '../../assets/images/teamwork.jpg';
-import strategyImg from '../../assets/images/strategy.jpg';
-import earthImg from '../../assets/images/earth.jpg';
+import officeImg from '../../assets/images/shared/office.jpg';
+import teamworkImg from '../../assets/images/about/teamwork.jpg';
+import strategyImg from '../../assets/images/about/strategy.jpg';
+import earthImg from '../../assets/images/shared/earth.jpg';
 
 const useCases = [
   "Smart Buildings & Campuses",

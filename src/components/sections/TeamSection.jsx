@@ -3,9 +3,9 @@ import Container from '../layout/Container';
 import SectionHeader from '../common/SectionHeader';
 import Grid from '../common/Grid';
 import { FiLinkedin, FiTwitter } from 'react-icons/fi';
-import leadership1 from '../../assets/images/leadership1.jpg';
-import leadership2 from '../../assets/images/leadership2.jpg';
-import leadership3 from '../../assets/images/leadership3.jpg';
+import leadership1 from '../../assets/images/team/leadership1.jpg';
+import leadership2 from '../../assets/images/team/leadership2.jpg';
+import leadership3 from '../../assets/images/team/leadership3.jpg';
 
 const teamMembers = [
   {

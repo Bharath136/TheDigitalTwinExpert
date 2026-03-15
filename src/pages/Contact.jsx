@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import Hero from '../components/sections/Hero';
 import ContactSection from '../components/sections/ContactSection';
 import CTA from '../components/common/CTA';
-import contactHeroImg from '../assets/images/contact-hero.jpg';
+import contactHeroImg from '../assets/images/contact/contact-hero.jpg';
 
 const Contact = () => {
   useEffect(() => {

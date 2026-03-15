@@ -5,8 +5,8 @@ import Features from '../components/sections/Features';
 import Testimonials from '../components/sections/Testimonials';
 import CTA from '../components/common/CTA';
 import Button from '../components/common/Button';
-import heroImg from '../assets/images/hero.jpg';
-import engineersImg from '../assets/images/engineers.jpg';
+import heroImg from '../assets/images/home/hero.jpg';
+import engineersImg from '../assets/images/home/engineers.jpg';
 
 const Home = () => {
   useEffect(() => {
