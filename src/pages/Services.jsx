@@ -5,7 +5,7 @@ import SectionHeader from '../components/common/SectionHeader';
 import Container from '../components/layout/Container';
 import CTA from '../components/common/CTA';
 import { FiCpu, FiDatabase, FiLock, FiSettings } from 'react-icons/fi';
-import earthImg from '../assets/images/shared/earth.jpg';
+import servicesHeroImg from '../assets/images/services/hero.jpg';
 import securityImg from '../assets/images/services/security.jpg';
 import officeImg from '../assets/images/shared/office.jpg';
 import serversImg from '../assets/images/services/servers.jpg';
@@ -18,7 +18,7 @@ const Services = () => {
       <Hero 
         title="Industries We Support"
         subtitle="Each industry solution combines digital engineering, data analytics, and intelligent monitoring platforms."
-        image={earthImg}
+        image={servicesHeroImg}
         height="min-h-[80vh] lg:min-h-[60vh]"
       />
       

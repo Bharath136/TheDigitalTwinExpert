@@ -1,12 +1,21 @@
 import React from 'react';
 import Container from '../components/layout/Container';
 import SectionHeader from '../components/common/SectionHeader';
+import Hero from '../components/sections/Hero';
+import supportHeroImg from '../assets/images/support/hero.jpg';
 
 const Support = () => {
   return (
-    <main className="pt-32 pb-20 bg-gray-50 min-h-screen">
-      <Container>
-        <SectionHeader title="News & Updates" subtitle="Support" />
+    <main className="bg-gray-50 min-h-screen">
+      <Hero 
+        title="Support & Resources"
+        subtitle="Insights, updates, and assistance from The Digital Twin Experts."
+        image={supportHeroImg}
+        height="min-h-[70vh] lg:min-h-[50vh]"
+      />
+      <section className="py-20">
+        <Container>
+          <SectionHeader title="News & Updates" subtitle="Support" />
         <div className="bg-white p-8 rounded-sm shadow-sm md:p-12 text-center border-t-4 border-[var(--color-siemens-primary)] mt-8">
           <svg className="w-16 h-16 text-[var(--color-siemens-primary)] mx-auto mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9.5L18.5 8H20"></path>
@@ -19,7 +28,8 @@ const Support = () => {
             Subscribe to Newsletter
           </button>
         </div>
-      </Container>
+        </Container>
+      </section>
     </main>
   );
 };

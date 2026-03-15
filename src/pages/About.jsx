@@ -3,7 +3,7 @@ import Hero from '../components/sections/Hero';
 import AboutOverview from '../components/sections/AboutOverview';
 import TeamSection from '../components/sections/TeamSection';
 import CTA from '../components/common/CTA';
-import earthImg from '../assets/images/shared/earth.jpg';
+import aboutHeroImg from '../assets/images/about/hero.jpg';
 
 const About = () => {
 
@@ -12,7 +12,7 @@ const About = () => {
       <Hero 
         title="Pioneering Digital Infrastructure"
         subtitle="Driven by innovation, expertise, and a commitment to creating a more connected and sustainable world."
-        image={earthImg}
+        image={aboutHeroImg}
         height="min-h-[80vh] lg:min-h-[60vh]"
       />
       

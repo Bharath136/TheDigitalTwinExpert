@@ -23,7 +23,7 @@ const Sustainability = () => {
       <Hero 
         title="Sustainability & Net-Zero"
         subtitle="Digital Twins play an important role in achieving sustainable infrastructure and climate resilience."
-        image="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&q=80"
+        image={sustainabilityHeroImg}
         height="min-h-[70vh] lg:min-h-[50vh]"
       />
       

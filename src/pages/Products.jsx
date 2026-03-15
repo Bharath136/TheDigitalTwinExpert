@@ -4,6 +4,7 @@ import SectionHeader from '../components/common/SectionHeader';
 import Container from '../components/layout/Container';
 import Grid from '../components/common/Grid';
 import CTA from '../components/common/CTA';
+import productsHeroImg from '../assets/images/products/hero.jpg';
 
 const products = [
   { id: "healthcare", title: "Healthcare Digital Twin", desc: "Operational intelligence, asset tracking, and patient-centric monitoring.", icon: "🏥" },
@@ -21,7 +22,7 @@ const Products = () => {
       <Hero 
         title="Our Products"
         subtitle="TDTE provides specialized Digital Twin solutions designed for different environments."
-        image="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80"
+        image={productsHeroImg}
         height="min-h-[70vh] lg:min-h-[50vh]"
       />
       

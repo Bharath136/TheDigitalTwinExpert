@@ -13,10 +13,6 @@ const Navbar = () => {
     setActiveMobileMenu(activeMobileMenu === menuName ? null : menuName);
   };
 
-  // Pages that don't have a dark hero image at the top need dark text immediately
-  const lightNavbarRoutes = ['/support'];
-  const isLightNavbarRoute = lightNavbarRoutes.includes(location.pathname);
-
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
@@ -84,16 +80,14 @@ const Navbar = () => {
   return (
     <header 
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white/90 backdrop-blur-md shadow-sm border-b border-gray-100 py-3' 
-        : isLightNavbarRoute ? 'bg-white/90 backdrop-blur-md border-b border-gray-100 py-5' 
-        : 'bg-transparent py-5'
+        isScrolled ? 'bg-white/90 backdrop-blur-md shadow-sm border-b border-gray-100 py-3' : 'bg-transparent py-5'
       }`}
     >
       <Container>
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2">
             {/* Minimal Logo similar to Siemens */}
-            <span className={`text-2xl font-bold tracking-tight transition-colors duration-300 ${isScrolled || isLightNavbarRoute ? 'text-[var(--color-siemens-primary)]' : 'text-white'}`}>
+            <span className={`text-2xl font-bold tracking-tight transition-colors duration-300 ${isScrolled ? 'text-[var(--color-siemens-primary)]' : 'text-white'}`}>
               TDTE<span className="text-[var(--color-siemens-accent)]">.</span>
             </span>
           </Link>
@@ -109,8 +103,8 @@ const Navbar = () => {
                     rel="noopener noreferrer" 
                     className={`text-sm font-semibold uppercase tracking-wider transition-colors duration-300 flex items-center gap-1 ${
                       location.pathname === link.path 
-                        ? ((isScrolled || isLightNavbarRoute) ? 'text-[var(--color-siemens-primary)]' : 'text-white') 
-                        : ((isScrolled || isLightNavbarRoute) ? 'text-slate-700 hover:text-[var(--color-siemens-primary)]' : 'text-white/80 hover:text-white')
+                        ? (isScrolled ? 'text-[var(--color-siemens-primary)]' : 'text-white') 
+                        : (isScrolled ? 'text-slate-700 hover:text-[var(--color-siemens-primary)]' : 'text-white/80 hover:text-white')
                     }`}
                   >
                     {link.name}
@@ -120,8 +114,8 @@ const Navbar = () => {
                     to={link.path}
                     className={`text-sm font-semibold uppercase tracking-wider transition-colors duration-300 flex items-center gap-1 py-4 ${
                       location.pathname.startsWith(link.path) && link.path !== '/'
-                        ? ((isScrolled || isLightNavbarRoute) ? 'text-[var(--color-siemens-primary)]' : 'text-white') 
-                        : ((isScrolled || isLightNavbarRoute) ? 'text-slate-700 hover:text-[var(--color-siemens-primary)]' : 'text-white/80 hover:text-white')
+                        ? (isScrolled ? 'text-[var(--color-siemens-primary)]' : 'text-white') 
+                        : (isScrolled ? 'text-slate-700 hover:text-[var(--color-siemens-primary)]' : 'text-white/80 hover:text-white')
                     }`}
                   >
                     {link.name}
@@ -167,7 +161,7 @@ const Navbar = () => {
           <div className="hidden md:flex items-center gap-4">
             <Link 
               to="/contact"
-              className={`px-5 py-2.5 rounded-sm font-semibold text-sm transition-all duration-300 ${(isScrolled || isLightNavbarRoute) ? 'bg-[var(--color-siemens-primary)] text-white hover:bg-sky-600 shadow-md' : 'bg-white text-[var(--color-siemens-primary)] hover:bg-gray-100'}`}
+              className={`px-5 py-2.5 rounded-sm font-semibold text-sm transition-all duration-300 ${isScrolled ? 'bg-[var(--color-siemens-primary)] text-white hover:bg-sky-600 shadow-md' : 'bg-white text-[var(--color-siemens-primary)] hover:bg-gray-100'}`}
             >
               Contact Us
             </Link>
@@ -175,7 +169,7 @@ const Navbar = () => {
 
           {/* Mobile Menu Button */}
           <button 
-            className={`md:hidden ${(isScrolled || isLightNavbarRoute) ? 'text-slate-800' : 'text-white'} focus:outline-none`}
+            className={`md:hidden ${isScrolled ? 'text-slate-800' : 'text-white'} focus:outline-none`}
             onClick={() => {
               setIsOpen(!isOpen);
               if (isOpen) setActiveMobileMenu(null);
