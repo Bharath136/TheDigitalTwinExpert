@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { FiMenu, FiX, FiSearch, FiGlobe } from 'react-icons/fi';
+import { FiMenu, FiX } from 'react-icons/fi';
 import Container from './Container';
 
 const Navbar = () => {
@@ -157,7 +157,6 @@ const Navbar = () => {
             ))}
           </nav>
 
-          {/* Contact Highlight Button */}
           <div className="hidden md:flex items-center gap-4">
             <Link 
               to="/contact"
@@ -167,16 +166,18 @@ const Navbar = () => {
             </Link>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button 
-            className={`md:hidden ${isScrolled ? 'text-slate-800' : 'text-white'} focus:outline-none`}
-            onClick={() => {
-              setIsOpen(!isOpen);
-              if (isOpen) setActiveMobileMenu(null);
-            }}
-          >
-            {isOpen ? <FiX size={24} className="text-slate-800" /> : <FiMenu size={24} />}
-          </button>
+          {/* Mobile Actions */}
+          <div className="md:hidden flex items-center gap-3">
+            <button 
+              className={`${isScrolled ? 'text-slate-800 dark:text-slate-200' : 'text-white'} focus:outline-none`}
+              onClick={() => {
+                setIsOpen(!isOpen);
+                if (isOpen) setActiveMobileMenu(null);
+              }}
+            >
+              {isOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+            </button>
+          </div>
         </div>
       </Container>
 

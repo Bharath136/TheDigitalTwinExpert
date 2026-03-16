@@ -14,11 +14,17 @@
 
   --font-inter: 'Inter', system-ui, -apple-system, sans-serif;
   --font-open-sans: 'Open Sans', system-ui, -apple-system, sans-serif;
+
+  --dark-selector: .dark;
 }
 
 @layer base {
   html, body {
-    @apply font-inter text-slate-800 bg-white antialiased overflow-x-hidden;
+    @apply font-inter text-slate-800 bg-white antialiased overflow-x-hidden transition-colors duration-300;
+  }
+  
+  html.dark body {
+    @apply bg-[var(--color-siemens-gray-900)] text-slate-200;
   }
   
   h1, h2, h3, h4, h5, h6 {
