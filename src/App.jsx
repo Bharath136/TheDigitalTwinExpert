@@ -8,6 +8,7 @@ import Contact from './pages/Contact';
 import Products from './pages/Products';
 import Sustainability from './pages/Sustainability';
 import Support from './pages/Support';
+import NotFound from './pages/NotFound';
 import ScrollToHash from './components/common/ScrollToHash';
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
             <Route path="/sustainability" element={<Sustainability />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/support" element={<Support />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </div>
         <Footer />
