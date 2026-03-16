@@ -2,8 +2,7 @@ export const contactData = {
   headquarters: {
     address1: "123 Innovation Drive",
     address2: "Tech City, TC 10010",
-    country: "United States",
-    mapLink: "https://www.google.com/maps"
+    country: "United States"
   },
   phone: {
     name: "Kranthi Kumar",

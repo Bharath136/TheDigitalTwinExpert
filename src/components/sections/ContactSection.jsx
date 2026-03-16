@@ -21,25 +21,23 @@ const ContactSection = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12 normal-case">
               <div className="flex flex-col items-center text-center gap-4">
-                <a href={contactData.headquarters.mapLink} target="_blank" rel="noopener noreferrer" className="w-16 h-16 bg-white text-[var(--color-siemens-primary)] shadow-sm rounded-sm flex items-center justify-center shrink-0 hover:bg-sky-50 transition-colors">
+                <div className="w-16 h-16 bg-white text-[var(--color-siemens-primary)] shadow-sm rounded-sm flex items-center justify-center shrink-0">
                   <FiMapPin size={28} />
-                </a>
+                </div>
                 <div>
                   <h4 className="font-bold text-lg text-slate-900 mb-3">Global Headquarters</h4>
                   <p className="text-slate-600 leading-relaxed">
-                    <a href={contactData.headquarters.mapLink} target="_blank" rel="noopener noreferrer" className="hover:text-[var(--color-siemens-primary)] transition-colors">
-                      {contactData.headquarters.address1}<br />
-                      {contactData.headquarters.address2}<br />
-                      {contactData.headquarters.country}
-                    </a>
+                    {contactData.headquarters.address1}<br />
+                    {contactData.headquarters.address2}<br />
+                    {contactData.headquarters.country}
                   </p>
                 </div>
               </div>
 
               <div className="flex flex-col items-center text-center gap-4">
-                <a href={`tel:${contactData.phone.value}`} className="w-16 h-16 bg-white text-[var(--color-siemens-primary)] shadow-sm rounded-sm flex items-center justify-center shrink-0 hover:bg-sky-50 transition-colors">
+                <div className="w-16 h-16 bg-white text-[var(--color-siemens-primary)] shadow-sm rounded-sm flex items-center justify-center shrink-0">
                   <FiPhone size={28} />
-                </a>
+                </div>
                 <div>
                   <h4 className="font-bold text-lg text-slate-900 mb-3">Phone</h4>
                   <p className="text-slate-900 font-semibold mb-1">{contactData.phone.name}</p>
@@ -51,9 +49,9 @@ const ContactSection = () => {
               </div>
 
               <div className="flex flex-col items-center text-center gap-4">
-                <a href={`mailto:${contactData.email.value}`} className="w-16 h-16 bg-white text-[var(--color-siemens-primary)] shadow-sm rounded-sm flex items-center justify-center shrink-0 hover:bg-sky-50 transition-colors">
+                <div className="w-16 h-16 bg-white text-[var(--color-siemens-primary)] shadow-sm rounded-sm flex items-center justify-center shrink-0">
                   <FiMail size={28} />
-                </a>
+                </div>
                 <div>
                   <h4 className="font-bold text-lg text-slate-900 mb-3">Email</h4>
                   <p className="text-slate-600">
