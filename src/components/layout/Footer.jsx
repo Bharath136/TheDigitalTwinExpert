@@ -12,7 +12,7 @@ const Footer = () => {
           <div>
             <div className="mb-6 inline-block bg-white rounded-xl p-2">
               <img
-                src="/logo-original.jpg"
+                src="/TDTE_LOGO.png"
                 alt="The Digital Twin Experts"
                 className="h-14 w-auto"
               />
