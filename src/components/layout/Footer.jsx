@@ -10,9 +10,13 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Brand & Intro */}
           <div>
-            <span className="text-2xl font-bold tracking-tight text-white mb-6 block">
-              TDTE<span className="text-[var(--color-siemens-accent)]">.</span>
-            </span>
+            <div className="mb-6 inline-block bg-white rounded-xl p-2">
+              <img
+                src="/logo-original.jpg"
+                alt="The Digital Twin Experts"
+                className="h-14 w-auto"
+              />
+            </div>
             <p className="text-sm text-gray-400 mb-6 leading-relaxed">
               Accelerating the adoption of Digital Twin technologies across infrastructure, industry, healthcare, and energy sectors to build an intelligent and sustainable world.
             </p>
