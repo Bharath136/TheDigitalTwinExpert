@@ -40,6 +40,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h4 className="font-bold text-lg text-slate-900 mb-3">Phone</h4>
+                  <p className="text-slate-900 font-semibold mb-1">{contactData.phone.name}</p>
                   <p className="text-slate-600">
                     <a href={`tel:${contactData.phone.value}`} className="hover:text-[var(--color-siemens-primary)] transition-colors">{contactData.phone.display}</a>
                   </p>

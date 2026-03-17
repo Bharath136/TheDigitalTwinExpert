@@ -85,11 +85,14 @@ const Navbar = () => {
     >
       <Container>
         <div className="flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-2">
-            {/* Minimal Logo similar to Siemens */}
-            <span className={`text-2xl font-bold tracking-tight transition-colors duration-300 ${isScrolled ? 'text-[var(--color-siemens-primary)]' : 'text-white'}`}>
-              TDTE<span className="text-[var(--color-siemens-accent)]">.</span>
-            </span>
+          <Link to="/" className="flex items-center">
+            <div className={`transition-all duration-300 ${isScrolled ? 'bg-transparent p-0' : 'bg-white/10 backdrop-blur-sm rounded-lg px-2 py-1'}`}>
+              <img
+                src="/logo-original.jpg"
+                alt="The Digital Twin Experts"
+                className="h-10 w-auto transition-all duration-300 rounded"
+              />
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
