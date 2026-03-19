@@ -1,0 +1,52 @@
+﻿[36mvite v7.3.1 [32mbuilding client environment for production...[36m[39m
+transforming...
+node.exe : Found 1 warning while 
+optimizing generated CSS:
+At line:1 char:1
++ & "C:\Program Files\nodejs/node.exe" 
+"C:\Program Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecifie 
+   d: (Found 1 warning... generated CSS:  
+  :String) [], RemoteException
+    + FullyQualifiedErrorId : NativeComma 
+   ndError
+ 
+
+[2mΓöé   }[22m
+[2mΓöé }[22m
+[2mΓöé[22m @import url('https://fonts.go
+ogleapis.com/css2?family=Plus+Jakarta+Sans
+:wght@300;400;500;600;700;800&display=swap
+');
+[2mΓöå[22m        [33m[2m^--[22m 
+@import rules must precede all rules 
+aside from @charset and @layer 
+statements[39m
+[2mΓöå[22m
+[2mΓöé body.menu-open {[22m
+[2mΓöé   overflow: hidden;[22m
+
+[32mΓ£ô[39m 51 modules transformed.
+[31mΓ£ù[39m Build failed in 557ms
+[31merror during build:
+[31mCould not resolve 
+"../assets/images/services/hero.jpg" from 
+"src/pages/Industries.jsx"[31m
+file: [36mD:/Projects/company-website/src
+/pages/Industries.jsx[31m
+    at getRollupError (file:///D:/Projects
+/company-website/node_modules/rollup/dist/
+es/shared/parseAst.js:402:41)
+    at error (file:///D:/Projects/company-
+website/node_modules/rollup/dist/es/shared
+/parseAst.js:398:42)
+    at 
+ModuleLoader.handleInvalidResolvedId (file
+:///D:/Projects/company-website/node_modul
+es/rollup/dist/es/shared/node-entry.js:217
+10:24)
+    at file:///D:/Projects/company-website
+/node_modules/rollup/dist/es/shared/node-e
+ntry.js:21670:26[39m

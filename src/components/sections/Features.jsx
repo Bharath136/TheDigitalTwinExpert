@@ -76,7 +76,7 @@ const Features = () => {
             {/* Abstract placeholders since images are external */}
             <div className="absolute inset-0 bg-gradient-to-br from-[#009999]/20 to-[#000033]/90 z-10 mix-blend-multiply" />
             <img 
-              src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80" 
+              src="/images/unsplash/features.jpg" 
               alt="Corporate architecture" 
               className="w-full h-full object-cover"
             />

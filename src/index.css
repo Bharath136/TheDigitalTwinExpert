@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -12,21 +13,42 @@
   --color-siemens-gray-800: #1e293b;
   --color-siemens-gray-900: #0f172a;
 
-  --font-inter: 'Inter', system-ui, -apple-system, sans-serif;
-  --font-open-sans: 'Open Sans', system-ui, -apple-system, sans-serif;
+  --font-inter: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-open-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
 
   --dark-selector: .dark;
+}
+
+/* Prevent scrolling overflow on body when mobile menu is open */
+body.menu-open {
+  overflow: hidden;
+}
+
+/* Custom Slim Scrollbar for dense UI components (like flip cards) */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.4);
 }
 
 @layer base {
   html, body {
     @apply font-inter text-slate-800 bg-white antialiased overflow-x-hidden transition-colors duration-300;
   }
-  
+
   html.dark body {
     @apply bg-[var(--color-siemens-gray-900)] text-slate-200;
   }
-  
+
   h1, h2, h3, h4, h5, h6 {
     @apply font-open-sans font-semibold tracking-tight;
   }

@@ -1,0 +1,23 @@
+export const searchIndex = [
+  { title: 'Home', path: '/', type: 'Page' },
+  { title: 'About Us - Vision & Mission', path: '/about', type: 'Page' },
+  { title: 'Solutions - What We Deliver', path: '/solutions', type: 'Page' },
+  { title: 'Platform (TwinOS) Overview', path: '/platform', type: 'Page' },
+  { title: 'Why Partner With Us?', path: '/why-us', type: 'Page' },
+  { title: 'Insights, Blogs & Case Studies', path: '/insights', type: 'Page' },
+  { title: 'Contact Us', path: '/contact', type: 'Page' },
+  { title: 'Healthcare Industry', path: '/industries/healthcare', type: 'Industry' },
+  { title: 'Industrial & Manufacturing', path: '/industries/industrial', type: 'Industry' },
+  { title: 'Energy & Utilities', path: '/industries/energy', type: 'Industry' },
+  { title: 'Smart Cities', path: '/industries/smart-cities', type: 'Industry' },
+  { title: 'Built Environment', path: '/industries/built-environment', type: 'Industry' },
+  { title: 'Transportation', path: '/industries/transportation', type: 'Industry' },
+  { title: 'Sustainability', path: '/industries/sustainability', type: 'Industry' },
+  { title: 'TwinOS Healthcare Twin (HDT)', path: '/platform#hdt', type: 'Solution' },
+  { title: 'TwinOS Industrial Twin (IDT)', path: '/platform#idt', type: 'Solution' },
+  { title: 'TwinOS Energy Twin (EDT)', path: '/platform#edt', type: 'Solution' },
+  { title: 'TwinOS Urban Twin (UDT)', path: '/platform#udt', type: 'Solution' },
+  { title: 'TwinOS Built Twin (BDT)', path: '/platform#bdt', type: 'Solution' },
+  { title: 'TwinOS Transport Twin (TDT)', path: '/platform#tdt', type: 'Solution' },
+  { title: 'TwinOS Sustainability Twin (SDT)', path: '/platform#sdt', type: 'Solution' }
+];

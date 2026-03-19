@@ -3,12 +3,15 @@ import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
-import Services from './pages/Services';
 import Contact from './pages/Contact';
-import Products from './pages/Products';
-import Sustainability from './pages/Sustainability';
-import Support from './pages/Support';
+import Solutions from './pages/Solutions';
+import Industries from './pages/Industries';
+import Platform from './pages/Platform';
+import WhyUs from './pages/WhyUs';
+import Insights from './pages/Insights';
+import IndustryDetail from './pages/IndustryDetail';
 import NotFound from './pages/NotFound';
+import ComingSoon from './pages/ComingSoon';
 import ScrollToHash from './components/common/ScrollToHash';
 
 function App() {
@@ -20,11 +23,26 @@ function App() {
         <div className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/services" element={<Services />} />
-            {/*<Route path="/products" element={<Products />} />
-            <Route path="/sustainability" element={<Sustainability />} /> */}
+            <Route path="/solutions" element={<Solutions />} />
+            <Route path="/industries" element={<Industries />} />
+            <Route path="/industries/:id" element={<IndustryDetail />} />
+            {/* <Route path="/platform" element={<Platform />} /> */}
+            <Route path="/platform" element={<ComingSoon />} />
+            {/* <Route path="/why-us" element={<WhyUs />} /> */}
+            <Route path="/why-us" element={<ComingSoon />} />
+            {/*<Route path="/about" element={<About />} />*/}
+            <Route path="/about" element={<ComingSoon />} />
+            {/*<Route path="/insights" element={<Insights />} />*/}
+            <Route path="/insights" element={<ComingSoon />} />
             <Route path="/contact" element={<Contact />} />
+            {/* <Route path="/services" element={<Industries />} /> */}
+            <Route path="/services" element={<ComingSoon />} />
+
+            {/* <Route path="/products" element={<Platform />} /> */}
+            <Route path="/products" element={<ComingSoon />} />
+
+            {/* <Route path="/sustainability" element={<Sustainability />} /> */}
+            <Route path="/sustainability" element={<ComingSoon />} />
             {/* <Route path="/support" element={<Support />} /> */}
             <Route path="*" element={<NotFound />} />
           </Routes>
