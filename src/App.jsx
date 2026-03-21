@@ -11,6 +11,7 @@ import WhyUs from './pages/WhyUs';
 import Insights from './pages/Insights';
 import IndustryDetail from './pages/IndustryDetail';
 import NotFound from './pages/NotFound';
+import Sustainability from './pages/Sustainability';
 import ComingSoon from './pages/ComingSoon';
 import ScrollToHash from './components/common/ScrollToHash';
 
@@ -32,7 +33,7 @@ function App() {
             <Route path="/insights" element={<Insights />} />
             <Route path="/services" element={<Industries />} />
             <Route path="/products" element={<Platform />} />
-            <Route path="/sustainability" element={<ComingSoon />} />
+            <Route path="/sustainability" element={<Sustainability />} />
             <Route path="/support" element={<ComingSoon />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<NotFound />} />
