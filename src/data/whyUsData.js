@@ -1,103 +1,97 @@
-import { 
-  FiLayers, FiGlobe, FiCpu, FiDatabase, FiTrendingUp, FiDollarSign, 
-  FiMaximize, FiMonitor, FiActivity, FiSun, FiFastForward, FiUsers, 
-  FiSettings, FiShield, FiBookOpen, FiBriefcase, FiAperture, FiCommand, FiAward 
-} from 'react-icons/fi';
-
-export const whyUsCards = [
+export const whyUsPoints = [
   {
-    title: 'End-to-End Digital Twin Expertise',
-    icon: FiLayers,
-    desc: 'We deliver complete lifecycle Digital Twin solutions—from concept, BIM, and construction to operations, optimization, and asset intelligence—ensuring seamless data continuity across all phases.'
+    title: "End-to-End Digital Twin Expertise",
+    description: "We aren't just software vendors; we are digital engineering experts. We guide your transformation from strategy and design to build, operation, and lifecycle management.",
+    image: "/images/why-us/end-to-end-expertise.png"
   },
   {
-    title: 'Deep Industry Experience Across Sectors',
-    icon: FiGlobe,
-    desc: 'Proven expertise in Built Environment & Infrastructure, Industrial, Energy, Healthcare, Transportation, and Smart Cities—tailored solutions for each domain\'s unique challenges.'
+    title: "The Power of DTwinOS",
+    description: "Our proprietary DTwinOS platform connects BIM, AI, IoT, and ERP data into a single, unified command center—eliminating data silos and providing complete operational intelligence.",
+    image: "/images/why-us/power-of-dtwinos.png"
   },
   {
-    title: 'AI-Powered TwinOS Platform',
-    icon: FiCpu,
-    desc: 'Our proprietary TwinOS enables real-time data integration, predictive analytics, automation, and intelligent decision-making—transforming traditional assets into smart, self-learning systems.'
+    title: "Proven Real-World Impact",
+    description: "Our solutions are trusted to optimize hospital operations, streamline manufacturing processes, manage smart city infrastructure, and accelerate net-zero transitions.",
+    image: "/images/why-us/proven-impact.png"
   },
   {
-    title: 'Strong BIM & Data Integration Capability',
-    icon: FiDatabase,
-    desc: 'Advanced integration with BIM, GIS, IoT, and enterprise systems like ACC, Autodesk Tandem, and cost management platforms—creating a unified digital ecosystem.'
+    title: "Deep Domain Knowledge",
+    description: "We understand the nuanced demands of healthcare, energy, manufacturing, transportation, and built environments, delivering tailored solutions rather than one-size-fits-all products.",
+    image: "/images/why-us/domain-knowledge.png"
   },
   {
-    title: 'Improved Operational Efficiency',
-    icon: FiTrendingUp,
-    desc: 'Optimize asset performance, reduce downtime, and increase lifecycle efficiency through data-driven insights and predictive maintenance.'
+    title: "Unlocking Hidden Asset Value",
+    description: "We transform static facilities into living, intelligent systems, turning your physical assets into data-driven engines for efficiency and profitability.",
+    image: "/images/why-us/hidden-asset-value.png"
   },
   {
-    title: 'Cost Optimization & ROI Focus',
-    icon: FiDollarSign,
-    desc: 'Deliver measurable value by reducing operational costs, minimizing rework, optimizing resources, and enabling better capital planning.'
+    title: "Vendor-Agnostic Integration",
+    description: "We integrate seamlessly with your existing tech stack (Bentley, Autodesk, SAP, Oracle, AWS, etc.), protecting your current investments while unlocking new capabilities.",
+    image: "/images/why-us/vendor-agnostic.png"
   },
   {
-    title: 'Scalable & Interoperable Solutions',
-    icon: FiMaximize,
-    desc: 'Built on open standards, allowing seamless scalability and interoperability across multiple systems, platforms, and geographies.'
+    title: "Actionable AI & Predictive Insights",
+    description: "We don't just show you data; our AI engines predict failures, simulate 'what-if' scenarios, and provide prescriptive recommendations to optimize performance before issues occur.",
+    image: "/images/why-us/actionable-ai.png"
   },
   {
-    title: 'Real-Time Monitoring & Control',
-    icon: FiMonitor,
-    desc: 'Enable command centers for real-time visualization, monitoring, and control of assets—supporting proactive decision-making.'
+    title: "Scalability from Asset to Enterprise",
+    description: "Whether you need a digital twin of a single HVAC system, a multi-building campus, or an entire smart city, our architecture scales dynamically.",
+    image: "/images/why-us/scalability.png"
   },
   {
-    title: 'Predictive & Prescriptive Intelligence',
-    icon: FiActivity,
-    desc: 'Move beyond monitoring—our AI-driven models predict failures, recommend actions, and automate decision workflows.'
+    title: "Commitment to Sustainability",
+    description: "Our Sustainability Digital Twins actively track carbon emissions, optimize energy consumption, and provide the exact data needed for rigorous ESG reporting and net-zero compliance.",
+    image: "/images/why-us/sustainability-commitment.png"
   },
   {
-    title: 'Sustainability & Net-Zero Enablement',
-    icon: FiSun,
-    desc: 'Track energy consumption, carbon footprint, and environmental impact—helping achieve sustainability goals and compliance.'
+    title: "Global Ecosystem & Partnerships",
+    description: "We leverage a worldwide network of technology partners, researchers, and early adopters, ensuring our clients always benefit from the absolute latest innovations.",
+    image: "/images/why-us/global-ecosystem.png"
   },
   {
-    title: 'Future-Ready Digital Transformation',
-    icon: FiFastForward,
-    desc: 'Help organizations transition into Industry 4.0 by embedding AI, IoT, and automation into their core operations.'
+    title: "Rapid Deployment & ROI",
+    description: "Through our standardized frameworks and pre-built industry modules within DTwinOS, we significantly reduce deployment time and accelerate time-to-value.",
+    image: "/images/why-us/rapid-deployment.png"
   },
   {
-    title: 'Expert Team & Global Collaboration',
-    icon: FiUsers,
-    desc: 'Backed by experienced BIM Managers, Digital Twin specialists, and AI engineers—ensuring high-quality delivery and innovation.'
+    title: "Future-Proof Architectures",
+    description: "Our cloud-native, API-first platforms are built to adapt. As new technologies like GenAI, edge computing, or advanced robotics evolve, your Digital Twin evolves with them.",
+    image: "/images/why-us/future-proof.png"
   },
   {
-    title: 'Customizable & Modular Approach',
-    icon: FiSettings,
-    desc: 'Flexible frameworks tailored to your needs—whether starting small or implementing enterprise-scale Digital Twin ecosystems.'
+    title: "Uncompromising Security & Privacy",
+    description: "We engineer enterprise-grade cybersecurity into the core of DTwinOS, ensuring your sensitive operational data, patient records, or IP remain fully protected.",
+    image: "/images/why-us/security-privacy.png"
   },
   {
-    title: 'Faster Project Delivery & Reduced Risk',
-    icon: FiShield,
-    desc: 'Identify clashes, inefficiencies, and risks early through digital simulation—reducing delays and improving project certainty.'
+    title: "Comprehensive Workforce Upskilling",
+    description: "We ensure adoption succeeds by providing rigorous training, change management support, and interactive digital twin environments to upskill your workforce.",
+    image: "/images/why-us/workforce-upskilling.png"
   },
   {
-    title: 'Training & Capability Building',
-    icon: FiBookOpen,
-    desc: 'We empower your teams through structured training, upskilling, and knowledge transfer programs.'
+    title: "Data Standardization & Governance",
+    description: "We bring order to chaotic data environments, establishing clear ontologies and standards so you have a Single Source of Truth you can actually trust.",
+    image: "/images/why-us/data-standardization.png"
   },
   {
-    title: 'Strong Partnership Ecosystem',
-    icon: FiBriefcase,
-    desc: 'Collaborate with technology providers, asset owners, EPCs, academia, and governments to drive innovation at scale.'
+    title: "Bridging the Physical-Digital Divide",
+    description: "We effectively fuse real-time IoT telemetry with incredibly detailed 3D/BIM spatial contexts, providing unparalleled situational awareness.",
+    image: "/images/why-us/physical-digital-divide.png"
   },
   {
-    title: 'Lifecycle Asset Intelligence',
-    icon: FiAperture,
-    desc: 'Transform static assets into intelligent, data-driven systems that continuously learn, adapt, and improve over time.'
+    title: "Custom Digital Engineering",
+    description: "When off-the-shelf won’t work, our specialized engineers build bespoke digital solutions precisely engineered for your unique operational bottlenecks.",
+    image: "/images/why-us/custom-engineering.png"
   },
   {
-    title: 'Command Center & Digital Operations Hub',
-    icon: FiCommand,
-    desc: 'Enable centralized control rooms for entire asset portfolios—integrating all systems into one intelligent dashboard.'
+    title: "Dedicated Customer Success",
+    description: "Your success is our KPI. Our dedicated support teams work continuously alongside you to ensure your digital twins drive ongoing, measurable business transformation.",
+    image: "/images/why-us/customer-success.png"
   },
   {
-    title: 'Competitive Advantage Through Innovation',
-    icon: FiAward,
-    desc: 'Stay ahead of the market with cutting-edge technologies that differentiate your organization and future-proof investments.'
+    title: "We Build the Connected Future",
+    description: "Partnering with us means you aren't just buying software; you are investing in a digitally intelligent future where your assets run smarter, safer, and cleaner.",
+    image: "/images/why-us/connected-future.png"
   }
 ];

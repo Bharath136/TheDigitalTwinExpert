@@ -2,7 +2,7 @@ export const searchIndex = [
   { title: 'Home', path: '/', type: 'Page' },
   { title: 'About Us - Vision & Mission', path: '/about', type: 'Page' },
   { title: 'Solutions - What We Deliver', path: '/solutions', type: 'Page' },
-  { title: 'Platform (TwinOS) Overview', path: '/platform', type: 'Page' },
+  { title: 'Platform (DTwinOS) Overview', path: '/platform', type: 'Page' },
   { title: 'Why Partner With Us?', path: '/why-us', type: 'Page' },
   { title: 'Insights, Blogs & Case Studies', path: '/insights', type: 'Page' },
   { title: 'Contact Us', path: '/contact', type: 'Page' },
@@ -13,11 +13,11 @@ export const searchIndex = [
   { title: 'Built Environment', path: '/industries/built-environment', type: 'Industry' },
   { title: 'Transportation', path: '/industries/transportation', type: 'Industry' },
   { title: 'Sustainability', path: '/industries/sustainability', type: 'Industry' },
-  { title: 'TwinOS Healthcare Twin (HDT)', path: '/platform#hdt', type: 'Solution' },
-  { title: 'TwinOS Industrial Twin (IDT)', path: '/platform#idt', type: 'Solution' },
-  { title: 'TwinOS Energy Twin (EDT)', path: '/platform#edt', type: 'Solution' },
-  { title: 'TwinOS Urban Twin (UDT)', path: '/platform#udt', type: 'Solution' },
-  { title: 'TwinOS Built Twin (BDT)', path: '/platform#bdt', type: 'Solution' },
-  { title: 'TwinOS Transport Twin (TDT)', path: '/platform#tdt', type: 'Solution' },
-  { title: 'TwinOS Sustainability Twin (SDT)', path: '/platform#sdt', type: 'Solution' }
+  { title: 'DTwinOS Healthcare Twin (HDT)', path: '/platform#hdt', type: 'Solution' },
+  { title: 'DTwinOS Industrial Twin (IDT)', path: '/platform#idt', type: 'Solution' },
+  { title: 'DTwinOS Energy Twin (EDT)', path: '/platform#edt', type: 'Solution' },
+  { title: 'DTwinOS Urban Twin (UDT)', path: '/platform#udt', type: 'Solution' },
+  { title: 'DTwinOS Built Twin (BDT)', path: '/platform#bdt', type: 'Solution' },
+  { title: 'DTwinOS Transport Twin (TDT)', path: '/platform#tdt', type: 'Solution' },
+  { title: 'DTwinOS Sustainability Twin (SDT)', path: '/platform#sdt', type: 'Solution' }
 ];

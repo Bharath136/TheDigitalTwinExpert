@@ -41,7 +41,7 @@ const ContactForm = ({
     'w-full px-4 py-3 bg-white border border-gray-200 rounded-sm text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[var(--color-siemens-primary)] focus:border-transparent transition-all';
 
   return (
-    <section className="section-padding bg-[var(--color-siemens-gray-100)]">
+    <section className="section-padding bg-[var(--color-siemens-gray-100)]" id="form">
       <Container>
         <SectionHeader title={title} subtitle={subtitle} />
 

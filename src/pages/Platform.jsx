@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import Hero from '../components/sections/Hero';
 import SectionHeader from '../components/common/SectionHeader';
 import Container from '../components/layout/Container';
 import Grid from '../components/common/Grid';
 import CTA from '../components/common/CTA';
-import TwinCard from '../components/common/TwinCard';
+import PlatformSection from '../components/sections/PlatformSection';
+import { platformData } from '../data/platformData';
 
 // Using a placeholder background since image isn't available
 const platformHeroImg = "/images/unsplash/earth.jpg";
@@ -16,23 +18,23 @@ const capabilities = [
   { title: "Dashboard & Command Center", desc: "Centralized, intuitive interfaces providing 360-degree visibility and holistic operational control.", icon: "🖥️" }
 ];
 
-const twins = [
-  { name: 'DTwinOS Healthcare Twin', acronym: 'HDT', path: '/platform#hdt', desc: 'Hospitals, patient twins, medical equipment, and operational intelligence.', icon: '🏥' },
-  { name: 'DTwinOS Industrial Twin', acronym: 'IDT', path: '/platform#idt', desc: 'Factories, production systems, predictive maintenance, and performance optimization.', icon: '🏭' },
-  { name: 'DTwinOS Energy Twin', acronym: 'EDT', path: '/platform#edt', desc: 'Power generation, renewables, grid intelligence, and energy optimization.', icon: '⚡' },
-  { name: 'DTwinOS Urban Twin', acronym: 'UDT', path: '/platform#udt', desc: 'City-scale operations, citizen services, utilities, and governance.', icon: '🏙️' },
-  { name: 'DTwinOS Built Twin', acronym: 'BDT', path: '/platform#bdt', desc: 'Buildings, data centers, and lifecycle management.', icon: '🏗️' },
-  { name: 'DTwinOS Transport Twin', acronym: 'TDT', path: '/platform#tdt', desc: 'Rail, airports, metro rail, highways, and logistics network optimization.', icon: '🚆' },
-  { name: 'DTwinOS Sustainability Twin', acronym: 'SDT', path: '/platform#sdt', desc: 'Carbon tracking, ESG analytics, and net-zero transformation.', icon: '🌱' },
-];
-
 const Platform = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.getElementById(location.hash.slice(1));
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [location]);
 
   return (
     <main>
       <Hero
-        title="What is TwinOS?"
-        subtitle="TwinOS is a unified, AI-powered Digital Twin platform that delivers real-time asset intelligence and operational insights, powered by Autodesk Tandem and enhanced with advanced dashboards, automation, and AI-driven workflows."
+        title="What is DTwinOS?"
+        subtitle="DTwinOS is a unified, AI-powered Digital Twin platform that delivers real-time asset intelligence and operational insights, powered by Autodesk Tandem and enhanced with advanced dashboards, automation, and AI-driven workflows."
         image={platformHeroImg}
         height="min-h-[70vh] lg:min-h-[60vh]"
       />
@@ -53,28 +55,24 @@ const Platform = () => {
         </Container>
       </section>
 
-      {/* Section C - TwinOS Solutions */}
-      <section className="section-padding bg-[var(--color-siemens-gray-100)]">
+      {/* Section C - DTwinOS Solutions (Zig-Zag Layout) */}
+      <section className="py-8 bg-[var(--color-siemens-gray-100)]">
         <Container>
-          <SectionHeader title="Digital Twin Portfolio" subtitle="TwinOS Solutions" />
-          <p className="text-center text-body max-w-3xl mx-auto mb-16">
+          <SectionHeader title="Digital Twin Portfolio" subtitle="DTwinOS Solutions" />
+          <p className="text-center text-body max-w-3xl mx-auto mb-8">
             Explore our specialized platform offerings tailored to transform specific asset classes and industries.
           </p>
-
-          <Grid columns={2} gap={6}>
-            {twins.map((twin, i) => (
-              <TwinCard
-                key={i}
-                icon={twin.icon}
-                name={twin.name}
-                acronym={twin.acronym}
-                description={twin.desc}
-                link={twin.path}
-              />
-            ))}
-          </Grid>
         </Container>
       </section>
+
+      {/* Zig-Zag Sections mapping through platformData */}
+      {platformData.map((data, index) => (
+        <PlatformSection 
+          key={data.id} 
+          data={data} 
+          reverse={index % 2 !== 0} 
+        />
+      ))}
 
       <CTA
         title="Ready to deploy your Digital Twin?"

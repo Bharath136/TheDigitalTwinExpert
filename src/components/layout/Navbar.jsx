@@ -28,6 +28,7 @@ const Navbar = () => {
   }, []);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setIsOpen(false);
     setActiveMobileMenu(null);
     setIsSearchOpen(false);
@@ -53,37 +54,36 @@ const Navbar = () => {
       children: [
         { name: 'Company Vision & Mission', path: '/about#vision' },
         { name: 'Objectives', path: '/about#objectives' },
-        { name: 'Leadership', path: '/about#leadership' },
         { name: 'Global Ecosystem Approach', path: '/about#ecosystem' },
         { name: 'Partnerships', path: '/about#partnerships' },
-      ]
+      ] // removed Leadership
     },
     { name: 'Solutions', path: '/solutions' },
     {
       name: 'Industries',
       path: '/industries',
       children: [
-        { name: 'Healthcare', path: '/industries#healthcare' },
-        { name: 'Industrial & Manufacturing', path: '/industries#industrial' },
-        { name: 'Energy & Utilities', path: '/industries#energy' },
-        { name: 'Smart Cities', path: '/industries#smart-cities' },
-        { name: 'Built Environment & Infrastructure', path: '/industries#built-environment' },
-        { name: 'Transportation', path: '/industries#transportation' },
-        { name: 'Sustainability & Net-Zero', path: '/industries#sustainability' },
+        { name: 'Healthcare', path: '/industries/healthcare' },
+        { name: 'Industrial & Manufacturing', path: '/industries/industrial' },
+        { name: 'Energy & Utilities', path: '/industries/energy' },
+        { name: 'Smart Cities', path: '/industries/smart-cities' },
+        { name: 'Built Environment & Infrastructure', path: '/industries/built-environment' },
+        { name: 'Transportation', path: '/industries/transportation' },
+        { name: 'Sustainability & Net-Zero', path: '/industries/sustainability' },
       ]
     },
     {
-      name: 'Platform (TwinOS)',
+      name: 'DTwinOS',
       path: '/platform',
       isMegaMenu: true,
       children: [
-        { name: 'DTwinOS Healthcare Twin', acronym: 'HDT', path: '/platform#hdt', desc: 'Hospitals, patient twins, medical equipment, and operational intelligence.', icon: '🏥' },
-        { name: 'DTwinOS Industrial Twin', acronym: 'IDT', path: '/platform#idt', desc: 'Factories, production systems, predictive maintenance, and performance optimization.', icon: '🏭' },
-        { name: 'DTwinOS Energy Twin', acronym: 'EDT', path: '/platform#edt', desc: 'Power generation, renewables, grid intelligence, and energy optimization.', icon: '⚡' },
-        { name: 'DTwinOS Urban Twin', acronym: 'UDT', path: '/platform#udt', desc: 'City-scale operations, citizen services, utilities, and governance.', icon: '🏙️' },
-        { name: 'DTwinOS Built Twin', acronym: 'BDT', path: '/platform#bdt', desc: 'Buildings, data centers, and lifecycle management.', icon: '🏗️' },
-        { name: 'DTwinOS Transport Twin', acronym: 'TDT', path: '/platform#tdt', desc: 'Rail, airports,metro rails, highways, and logistics network optimization.', icon: '🚆' },
-        { name: 'DTwinOS Sustainability Twin', acronym: 'SDT', path: '/platform#sdt', desc: 'Carbon tracking, ESG analytics, and net-zero transformation.', icon: '🌱' },
+        { name: 'DTwinOS Healthcare Twin', acronym: 'HDT', path: '/platform/hdt', desc: 'Hospitals, patient twins, medical equipment, and operational intelligence.', icon: '🏥' },
+        { name: 'DTwinOS Industrial Twin', acronym: 'IDT', path: '/platform/idt', desc: 'Factories, production systems, predictive maintenance, and performance optimization.', icon: '🏭' },
+        { name: 'DTwinOS Energy Twin', acronym: 'EDT', path: '/platform/edt', desc: 'Power generation, renewables, grid intelligence, and energy optimization.', icon: '⚡' },
+        { name: 'DTwinOS Urban Twin', acronym: 'UDT', path: '/platform/udt', desc: 'City-scale operations, citizen services, utilities, and governance.', icon: '🏙️' },
+        { name: 'DTwinOS Built Twin', acronym: 'BDT', path: '/platform/bdt', desc: 'Data Centers, Semiconductors, Infrastructure, Building and Life Cycle Management.', icon: '🏗️' },
+        { name: 'DTwinOS Transport Twin', acronym: 'TDT', path: '/platform/tdt', desc: 'Rail, airports,metro rails, highways, and logistics network optimization.', icon: '🚆' },
+        { name: 'DTwinOS Sustainability Twin', acronym: 'SDT', path: '/platform/sdt', desc: 'Carbon tracking, ESG analytics, and net-zero transformation.', icon: '🌱' },
       ]
     },
     { name: 'Why Us', path: '/why-us' },
@@ -151,7 +151,7 @@ const Navbar = () => {
                 {link.children && link.isMegaMenu && (
                   <div className="absolute top-full left-1/2 -translate-x-1/2 w-[900px] bg-gray-50 shadow-2xl rounded-b-lg border-t-4 border-[var(--color-siemens-primary)] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform -translate-y-2 group-hover:translate-y-0 p-8">
                     <div className="flex justify-between items-center border-b border-gray-200 pb-4 mb-6">
-                      <h3 className="text-xl font-bold text-slate-800">TwinOS Solutions</h3>
+                      <h3 className="text-xl font-bold text-slate-800">DTwinOS Solutions</h3>
                       <Link to="/platform" className="text-sm font-semibold text-[var(--color-siemens-primary)] hover:underline flex items-center gap-1">
                         View All Platform Capabilities <FiExternalLink />
                       </Link>

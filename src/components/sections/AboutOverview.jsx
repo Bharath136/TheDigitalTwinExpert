@@ -1,6 +1,6 @@
 import React from 'react';
 import Container from '../layout/Container';
-import { FiCheckCircle, FiEye, FiTarget, FiZap } from 'react-icons/fi';
+import { FiEye, FiTarget, FiZap } from 'react-icons/fi';
 import officeImg from '../../assets/images/shared/office.jpg';
 import teamworkImg from '../../assets/images/about/teamwork.jpg';
 import strategyImg from '../../assets/images/about/strategy.jpg';
@@ -128,7 +128,7 @@ const AboutOverview = () => {
               <p className="text-body mb-6 text-lg leading-relaxed text-slate-700">
                 We are a global Digital Twin transformation company specializing
                 in AI-powered ecosystems for infrastructure, cities, healthcare,
-                energy, and industry. Our platform, TwinOS, acts as the
+                energy, and industry. Our platform, DTwinOS, acts as the
                 operating system for Digital Twins, connecting data, systems,
                 and assets into one intelligent, unified environment.
               </p>
@@ -197,7 +197,7 @@ const AboutOverview = () => {
         reverse
       >
         Through AI-powered Digital Twins, BIM, and intelligent data
-        integration, we design, build, and operate a connected future—
+        integration, we design, build, and operate a connected future —
         transforming assets from villages to megacities into living,
         self-optimizing systems powered by TwinOS.
       </VMOSection>

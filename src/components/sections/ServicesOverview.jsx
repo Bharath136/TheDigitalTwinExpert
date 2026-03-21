@@ -17,7 +17,7 @@ const ServicesOverview = () => {
       <Container>
         <SectionHeader 
           title="Digital Twins for Every Industry" 
-          subtitle="Our Industries"
+          subtitle="Data Centers, Semiconductors, Infrastructure, Building and Life Cycle Management"
         />
 
         <p className="text-center text-body max-w-3xl mx-auto mb-12">

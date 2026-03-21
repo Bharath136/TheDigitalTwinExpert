@@ -16,7 +16,7 @@ const insightsData = [
   { id: 3, type: 'Whitepapers', title: 'The ISO 19650 Guide to Digital Twins', date: 'January 10, 2026', readTime: '15 min read' },
   { id: 4, type: 'Industry Trends', title: 'Why Predictive Maintenance is the New Standard', date: 'April 02, 2026', readTime: '6 min read' },
   { id: 5, type: 'Blogs', title: 'The ROI of Digital Handover', date: 'March 05, 2026', readTime: '4 min read' },
-  { id: 6, type: 'Case Studies', title: 'Optimizing Rail Networks with TwinOS TDT', date: 'November 12, 2025', readTime: '10 min read' },
+  { id: 6, type: 'Case Studies', title: 'Optimizing Rail Networks with DTwinOS TDT', date: 'November 12, 2025', readTime: '10 min read' },
 ];
 
 const Insights = () => {

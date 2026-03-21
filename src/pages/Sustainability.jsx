@@ -48,7 +48,7 @@ const Sustainability = () => {
       <section className="py-24 bg-white">
         <Container>
           <SectionHeader
-            title="Building a Greener Future with TwinOS"
+            title="Building a Greener Future with DTwinOS"
             subtitle="Our Sustainability Twin (SDT) platform transforms environmental goals into measurable operational outcomes."
             centered
           />
@@ -114,7 +114,7 @@ const Sustainability = () => {
             <div className="relative z-10 max-w-3xl mx-auto">
               <h2 className="text-3xl md:text-5xl font-bold mb-8">Ready to accelerate your net-zero journey?</h2>
               <p className="text-xl opacity-90 mb-10 leading-relaxed">
-                Connect with our sustainability experts to discover how TwinOS can help you achieve your environmental goals while improving operational efficiency.
+                Connect with our sustainability experts to discover how DTwinOS can help you achieve your environmental goals while improving operational efficiency.
               </p>
               <button
                 className="px-10 py-4 bg-white text-[var(--color-siemens-primary)] font-bold rounded-full hover:bg-slate-100 transition-all shadow-xl text-lg"

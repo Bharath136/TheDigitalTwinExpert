@@ -103,13 +103,13 @@ const IndustryDetail = () => {
         </Container>
       </section>
 
-      {/* SECTION 4 — TwinOS Solution for This Industry */}
+      {/* SECTION 4 — DTwinOS Solution for This Industry */}
       <section className="py-24 bg-[var(--color-siemens-secondary)] relative overflow-hidden">
         <Container className="relative z-10">
           <div className="bg-white rounded-xl shadow-2xl p-10 md:p-14 max-w-4xl mx-auto border-t-8 border-[var(--color-siemens-primary)] text-center">
             <span className="text-6xl mb-6 block">{industry.twinLogo}</span>
             <span className="text-[var(--color-siemens-primary)] font-bold tracking-widest uppercase text-sm mb-4 block">
-              Powered by TwinOS
+              Powered by DTwinOS
             </span>
             <h2 className="text-4xl font-extrabold text-slate-900 mb-6">
               {industry.twinName} ({industry.twinAcronym})
@@ -118,7 +118,7 @@ const IndustryDetail = () => {
               {industry.twinDesc}
             </p>
             <Button to={industry.twinLink} variant="primary" size="lg" className="shadow-lg shadow-sky-500/30">
-              Explore TwinOS Solution →
+              Explore DTwinOS Solution →
             </Button>
           </div>
         </Container>

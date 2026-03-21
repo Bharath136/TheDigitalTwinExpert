@@ -21,7 +21,7 @@ const Home = () => {
         alignment="left"
       >
         <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl leading-relaxed">
-          At The Digital Twin Experts, we unify BIM, AI, and Digital Twin technologies into a single intelligent ecosystem—enabling organizations to design smarter, build faster, and operate more efficiently across the entire asset lifecycle.
+          At The Digital Twin Experts, we unify BIM, AI, and Digital Twin technologies into a single intelligent ecosystem — enabling organizations to design smarter, build faster, and operate more efficiently across the entire asset lifecycle.
         </p>
         <div className="flex flex-wrap gap-4 mt-8">
           <Button to="/industries" variant="primary" size="lg">Explore Industries</Button>
@@ -32,8 +32,8 @@ const Home = () => {
       {/* b) Key Industries (Visual Grid) */}
       <ServicesOverview />
 
-      {/* c) TwinOS Highlights */}
-      <TwinOSHighlights />
+      {/* c) DTwinOS Highlights */}
+      <DTwinOSHighlights />
 
       {/* d) Why Partner With Us */}
       <WhyPartnerWithUs />
@@ -52,14 +52,14 @@ const Home = () => {
   );
 };
 
-const TwinOSHighlights = () => (
+const DTwinOSHighlights = () => (
   <section className="py-20 bg-[var(--color-siemens-secondary)] text-slate-900 border-t border-[var(--color-siemens-primary)]/20">
     <Container>
       <div className="text-center max-w-3xl mx-auto mb-16">
         <h2 className="text-[var(--color-siemens-primary)] font-semibold tracking-wider uppercase text-sm mb-4 block">Core Technology</h2>
-        <h3 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">TwinOS Highlights</h3>
+        <h3 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">DTwinOS Highlights</h3>
         <p className="text-slate-700 text-lg leading-relaxed mb-6">
-          TwinOS is our proprietary platform that delivers real-time asset intelligence and operational insights, transforming static assets into intelligent living systems.
+          DTwinOS is our proprietary platform that delivers real-time asset intelligence and operational insights, transforming static assets into intelligent living systems.
         </p>
       </div>
       

@@ -10,6 +10,7 @@ import Platform from './pages/Platform';
 import WhyUs from './pages/WhyUs';
 import Insights from './pages/Insights';
 import IndustryDetail from './pages/IndustryDetail';
+import PlatformDetail from './pages/PlatformDetail';
 import NotFound from './pages/NotFound';
 import Sustainability from './pages/Sustainability';
 import ComingSoon from './pages/ComingSoon';
@@ -28,6 +29,7 @@ function App() {
             <Route path="/industries" element={<Industries />} />
             <Route path="/industries/:id" element={<IndustryDetail />} />
             <Route path="/platform" element={<Platform />} />
+            <Route path="/platform/:id" element={<PlatformDetail />} />
             <Route path="/why-us" element={<WhyUs />} />
             <Route path="/about" element={<About />} />
             <Route path="/insights" element={<Insights />} />

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Hero from '../components/sections/Hero';
 import AboutOverview from '../components/sections/AboutOverview';
 import EcosystemSection from '../components/sections/EcosystemSection';
@@ -21,7 +21,7 @@ const products = [
 const AboutProductsSection = () => (
   <section className="section-padding bg-slate-50 border-t border-slate-200">
     <Container>
-      <SectionHeader title="Products & Services" subtitle="Our TwinOS Offerings" />
+      <SectionHeader title="Products & Services" subtitle="Our DTwinOS Offerings" />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto mb-16">
         {products.map((product, i) => (
           <div key={i} className="bg-white border-l-4 border-[var(--color-siemens-primary)] shadow-sm p-5 rounded-sm flex items-center gap-4 hover:shadow-md transition-shadow">
