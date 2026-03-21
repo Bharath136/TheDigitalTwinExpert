@@ -1,11 +1,17 @@
-import React from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Container from '../layout/Container';
 import SectionHeader from '../common/SectionHeader';
-
 import { servicesData as industries } from '../../data/servicesData';
 
 const ServicesOverview = () => {
+  const [flippedIndex, setFlippedIndex] = useState(null);
+
+  const handleCardClick = (index) => {
+    // Toggle flip state for mobile/touch interaction
+    setFlippedIndex(flippedIndex === index ? null : index);
+  };
+
   return (
     <section className="bg-[var(--color-siemens-gray-100)] section-padding">
       <Container>
@@ -23,11 +29,14 @@ const ServicesOverview = () => {
           {industries.map((ind, index) => (
             <div 
               key={index} 
-              className="group aspect-square sm:aspect-[4/3] md:aspect-[5/4] lg:aspect-square w-full"
+              className="group aspect-square sm:aspect-[4/3] md:aspect-[5/4] lg:aspect-square w-full cursor-pointer"
               style={{ perspective: '1000px' }}
+              onClick={() => handleCardClick(index)}
             >
               <div 
-                className="relative w-full h-full rounded-md transition-transform duration-700 ease-in-out group-hover:[transform:rotateY(180deg)] shadow-md"
+                className={`relative w-full h-full rounded-md transition-transform duration-700 ease-in-out shadow-md ${
+                  flippedIndex === index ? '[transform:rotateY(180deg)]' : 'group-hover:[transform:rotateY(180deg)]'
+                }`}
                 style={{ transformStyle: 'preserve-3d' }}
               >
                 {/* ---------- FRONT ---------- */}
@@ -72,6 +81,7 @@ const ServicesOverview = () => {
                   <Link 
                     to={ind.linkTo} 
                     className="inline-flex items-center text-xs sm:text-sm font-bold uppercase tracking-wider hover:text-sky-200 transition-colors group/link mt-3 pt-2 border-t border-white/10 shrink-0"
+                    onClick={(e) => e.stopPropagation()} // Prevent link click from flipping card back
                   >
                     Learn More 
                     <svg className="w-4 h-4 ml-2 group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
