@@ -1,4 +1,4 @@
-import { 
+import {
   FiHeart, FiSettings, FiZap, FiMapPin, FiMonitor, FiTruck, FiGlobe,
   FiBox, FiCpu, FiShare2, FiCommand, FiMap, FiTrendingUp
 } from 'react-icons/fi';
@@ -20,7 +20,7 @@ export const industryData = {
     ],
     twinLogo: '🏥',
     twinAcronym: 'HDT',
-    twinName: 'TwinOS Healthcare Twin',
+    twinName: 'DTwinOS Healthcare Twin',
     twinDesc: 'The ultimate operational intelligence layer for modern hospitals.',
     twinLink: '/platform#hdt'
   },
@@ -40,7 +40,7 @@ export const industryData = {
     ],
     twinLogo: '🏭',
     twinAcronym: 'IDT',
-    twinName: 'TwinOS Industrial Twin',
+    twinName: 'DTwinOS Industrial Twin',
     twinDesc: 'Unlock unprecedented uptime and production optimization.',
     twinLink: '/platform#idt'
   },
@@ -60,7 +60,7 @@ export const industryData = {
     ],
     twinLogo: '⚡',
     twinAcronym: 'EDT',
-    twinName: 'TwinOS Energy Twin',
+    twinName: 'DTwinOS Energy Twin',
     twinDesc: 'Pioneering the smart grid transition with advanced analytics.',
     twinLink: '/platform#edt'
   },
@@ -80,7 +80,7 @@ export const industryData = {
     ],
     twinLogo: '🏙️',
     twinAcronym: 'UDT',
-    twinName: 'TwinOS Urban Twin',
+    twinName: 'DTwinOS Urban Twin',
     twinDesc: 'The digital backbone of future-ready, resilient metropolises.',
     twinLink: '/platform#udt'
   },
@@ -100,7 +100,7 @@ export const industryData = {
     ],
     twinLogo: '🏗️',
     twinAcronym: 'BDT',
-    twinName: 'TwinOS Built Twin',
+    twinName: 'DTwinOS Built Twin',
     twinDesc: 'Bridging the physical and digital divide for facility lifecycle mastery.',
     twinLink: '/platform#bdt'
   },
@@ -120,7 +120,7 @@ export const industryData = {
     ],
     twinLogo: '🚆',
     twinAcronym: 'TDT',
-    twinName: 'TwinOS Transport Twin',
+    twinName: 'DTwinOS Transport Twin',
     twinDesc: 'Logistics and mobility networks driven by continuous intelligence.',
     twinLink: '/platform#tdt'
   },
@@ -140,7 +140,7 @@ export const industryData = {
     ],
     twinLogo: '🌱',
     twinAcronym: 'SDT',
-    twinName: 'TwinOS Sustainability Twin',
+    twinName: 'DTwinOS Sustainability Twin',
     twinDesc: 'The definitive platform for verified, actionable environmental tracking.',
     twinLink: '/platform#sdt'
   }

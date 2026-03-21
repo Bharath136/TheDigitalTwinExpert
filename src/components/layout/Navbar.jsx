@@ -41,8 +41,8 @@ const Navbar = () => {
   }, [isSearchOpen]);
 
   // Derived filtered results
-  const searchResults = searchQuery.trim() 
-    ? searchIndex.filter(item => item.title.toLowerCase().includes(searchQuery.toLowerCase().trim())) 
+  const searchResults = searchQuery.trim()
+    ? searchIndex.filter(item => item.title.toLowerCase().includes(searchQuery.toLowerCase().trim()))
     : [];
 
   const navLinks = [
@@ -77,13 +77,13 @@ const Navbar = () => {
       path: '/platform',
       isMegaMenu: true,
       children: [
-        { name: 'TwinOS Healthcare Twin', acronym: 'HDT', path: '/platform#hdt', desc: 'Hospitals, patient twins, medical equipment, and operational intelligence.', icon: '🏥' },
-        { name: 'TwinOS Industrial Twin', acronym: 'IDT', path: '/platform#idt', desc: 'Factories, production systems, predictive maintenance, and performance optimization.', icon: '🏭' },
-        { name: 'TwinOS Energy Twin', acronym: 'EDT', path: '/platform#edt', desc: 'Power generation, renewables, grid intelligence, and energy optimization.', icon: '⚡' },
-        { name: 'TwinOS Urban Twin', acronym: 'UDT', path: '/platform#udt', desc: 'City-scale operations, citizen services, utilities, and governance.', icon: '🏙️' },
-        { name: 'TwinOS Built Twin', acronym: 'BDT', path: '/platform#bdt', desc: 'Buildings, airports, metro rail, data centers, and lifecycle management.', icon: '🏗️' },
-        { name: 'TwinOS Transport Twin', acronym: 'TDT', path: '/platform#tdt', desc: 'Rail, airports, highways, and logistics network optimization.', icon: '🚆' },
-        { name: 'TwinOS Sustainability Twin', acronym: 'SDT', path: '/platform#sdt', desc: 'Carbon tracking, ESG analytics, and net-zero transformation.', icon: '🌱' },
+        { name: 'DTwinOS Healthcare Twin', acronym: 'HDT', path: '/platform#hdt', desc: 'Hospitals, patient twins, medical equipment, and operational intelligence.', icon: '🏥' },
+        { name: 'DTwinOS Industrial Twin', acronym: 'IDT', path: '/platform#idt', desc: 'Factories, production systems, predictive maintenance, and performance optimization.', icon: '🏭' },
+        { name: 'DTwinOS Energy Twin', acronym: 'EDT', path: '/platform#edt', desc: 'Power generation, renewables, grid intelligence, and energy optimization.', icon: '⚡' },
+        { name: 'DTwinOS Urban Twin', acronym: 'UDT', path: '/platform#udt', desc: 'City-scale operations, citizen services, utilities, and governance.', icon: '🏙️' },
+        { name: 'DTwinOS Built Twin', acronym: 'BDT', path: '/platform#bdt', desc: 'Buildings, data centers, and lifecycle management.', icon: '🏗️' },
+        { name: 'DTwinOS Transport Twin', acronym: 'TDT', path: '/platform#tdt', desc: 'Rail, airports,metro rails, highways, and logistics network optimization.', icon: '🚆' },
+        { name: 'DTwinOS Sustainability Twin', acronym: 'SDT', path: '/platform#sdt', desc: 'Carbon tracking, ESG analytics, and net-zero transformation.', icon: '🌱' },
       ]
     },
     { name: 'Why Us', path: '/why-us' },
@@ -146,7 +146,7 @@ const Navbar = () => {
                     </div>
                   </div>
                 )}
-                
+
                 {/* Mega Menu for Platform */}
                 {link.children && link.isMegaMenu && (
                   <div className="absolute top-full left-1/2 -translate-x-1/2 w-[900px] bg-gray-50 shadow-2xl rounded-b-lg border-t-4 border-[var(--color-siemens-primary)] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform -translate-y-2 group-hover:translate-y-0 p-8">
@@ -158,7 +158,7 @@ const Navbar = () => {
                     </div>
                     <div className="grid grid-cols-2 gap-4">
                       {link.children.map((twin) => (
-                        <TwinCard 
+                        <TwinCard
                           key={twin.name}
                           icon={twin.icon}
                           name={twin.name}
@@ -225,7 +225,7 @@ const Navbar = () => {
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
               {searchQuery && (
-                <button 
+                <button
                   onClick={() => setSearchQuery('')}
                   className="absolute right-6 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 bg-slate-100 rounded-full p-1 transition-colors"
                 >
@@ -241,7 +241,7 @@ const Navbar = () => {
                   <ul className="max-h-96 overflow-y-auto py-2">
                     {searchResults.map((result, i) => (
                       <li key={i}>
-                        <Link 
+                        <Link
                           to={result.path}
                           onClick={() => {
                             setIsSearchOpen(false);
@@ -301,15 +301,15 @@ const Navbar = () => {
                 <div className={`overflow-hidden transition-all duration-300 ${activeMobileMenu === link.name ? 'max-h-[1000px] opacity-100 mb-4' : 'max-h-0 opacity-0'}`}>
                   <div className="pl-4 border-l-2 border-slate-200 ml-2 mt-1 flex flex-col gap-2">
                     {link.children.map((child) => (
-                        <Link
-                          key={child.name}
-                          to={child.path}
-                          className="block py-3 pl-4 text-sm font-medium text-slate-600 hover:text-[var(--color-siemens-primary)] hover:bg-sky-50 rounded-r-md transition-all border-b border-slate-50 last:border-0"
-                          onClick={() => setIsOpen(false)}
-                        >
-                          <span className="font-semibold text-slate-800 block mb-1">{child.name} {child.acronym ? `(${child.acronym})` : ''}</span>
-                          {child.desc && <span className="text-xs text-slate-500 font-normal line-clamp-1">{child.desc}</span>}
-                        </Link>
+                      <Link
+                        key={child.name}
+                        to={child.path}
+                        className="block py-3 pl-4 text-sm font-medium text-slate-600 hover:text-[var(--color-siemens-primary)] hover:bg-sky-50 rounded-r-md transition-all border-b border-slate-50 last:border-0"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        <span className="font-semibold text-slate-800 block mb-1">{child.name} {child.acronym ? `(${child.acronym})` : ''}</span>
+                        {child.desc && <span className="text-xs text-slate-500 font-normal line-clamp-1">{child.desc}</span>}
+                      </Link>
                     ))}
                   </div>
                 </div>

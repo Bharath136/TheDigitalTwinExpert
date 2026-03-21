@@ -6,8 +6,8 @@ export const contactData = {
   },
   phone: {
     name: "Kranthi Kumar",
-    display: "+91 9949489911",
-    value: "+919949489911",
+    display: "+91-9949-801-453",
+    value: "+919949801453",
     hours: "Mon-Fri from 8am to 5pm"
   },
   email: {

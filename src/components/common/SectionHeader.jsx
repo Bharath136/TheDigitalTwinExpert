@@ -5,7 +5,7 @@ const SectionHeader = ({ title, subtitle, className = '', centered = true }) => 
   return (
     <div className={`mb-12 md:mb-16 ${centered ? 'text-center' : 'text-left'} ${className}`}>
       {subtitle && (
-        <motion.span 
+        <motion.span
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -14,7 +14,7 @@ const SectionHeader = ({ title, subtitle, className = '', centered = true }) => 
           {subtitle}
         </motion.span>
       )}
-      <motion.h2 
+      <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -23,9 +23,9 @@ const SectionHeader = ({ title, subtitle, className = '', centered = true }) => 
       >
         {title}
       </motion.h2>
-      
+
       {/* Decorative divider - Siemens style */}
-      <motion.div 
+      <motion.div
         initial={{ scaleX: 0 }}
         whileInView={{ scaleX: 1 }}
         viewport={{ once: true }}

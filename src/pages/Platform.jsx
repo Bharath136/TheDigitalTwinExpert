@@ -17,26 +17,26 @@ const capabilities = [
 ];
 
 const twins = [
-  { name: 'TwinOS Healthcare Twin', acronym: 'HDT', path: '/platform#hdt', desc: 'Hospitals, patient twins, medical equipment, and operational intelligence.', icon: '🏥' },
-  { name: 'TwinOS Industrial Twin', acronym: 'IDT', path: '/platform#idt', desc: 'Factories, production systems, predictive maintenance, and performance optimization.', icon: '🏭' },
-  { name: 'TwinOS Energy Twin', acronym: 'EDT', path: '/platform#edt', desc: 'Power generation, renewables, grid intelligence, and energy optimization.', icon: '⚡' },
-  { name: 'TwinOS Urban Twin', acronym: 'UDT', path: '/platform#udt', desc: 'City-scale operations, citizen services, utilities, and governance.', icon: '🏙️' },
-  { name: 'TwinOS Built Twin', acronym: 'BDT', path: '/platform#bdt', desc: 'Buildings, airports, metro rail, data centers, and lifecycle management.', icon: '🏗️' },
-  { name: 'TwinOS Transport Twin', acronym: 'TDT', path: '/platform#tdt', desc: 'Rail, airports, highways, and logistics network optimization.', icon: '🚆' },
-  { name: 'TwinOS Sustainability Twin', acronym: 'SDT', path: '/platform#sdt', desc: 'Carbon tracking, ESG analytics, and net-zero transformation.', icon: '🌱' },
+  { name: 'DTwinOS Healthcare Twin', acronym: 'HDT', path: '/platform#hdt', desc: 'Hospitals, patient twins, medical equipment, and operational intelligence.', icon: '🏥' },
+  { name: 'DTwinOS Industrial Twin', acronym: 'IDT', path: '/platform#idt', desc: 'Factories, production systems, predictive maintenance, and performance optimization.', icon: '🏭' },
+  { name: 'DTwinOS Energy Twin', acronym: 'EDT', path: '/platform#edt', desc: 'Power generation, renewables, grid intelligence, and energy optimization.', icon: '⚡' },
+  { name: 'DTwinOS Urban Twin', acronym: 'UDT', path: '/platform#udt', desc: 'City-scale operations, citizen services, utilities, and governance.', icon: '🏙️' },
+  { name: 'DTwinOS Built Twin', acronym: 'BDT', path: '/platform#bdt', desc: 'Buildings, data centers, and lifecycle management.', icon: '🏗️' },
+  { name: 'DTwinOS Transport Twin', acronym: 'TDT', path: '/platform#tdt', desc: 'Rail, airports, metro rail, highways, and logistics network optimization.', icon: '🚆' },
+  { name: 'DTwinOS Sustainability Twin', acronym: 'SDT', path: '/platform#sdt', desc: 'Carbon tracking, ESG analytics, and net-zero transformation.', icon: '🌱' },
 ];
 
 const Platform = () => {
 
   return (
     <main>
-      <Hero 
+      <Hero
         title="What is TwinOS?"
         subtitle="TwinOS is a unified, AI-powered Digital Twin platform that delivers real-time asset intelligence and operational insights, powered by Autodesk Tandem and enhanced with advanced dashboards, automation, and AI-driven workflows."
         image={platformHeroImg}
         height="min-h-[70vh] lg:min-h-[60vh]"
       />
-      
+
       {/* Section B - Key Capabilities */}
       <section className="section-padding bg-white">
         <Container>
@@ -63,8 +63,8 @@ const Platform = () => {
 
           <Grid columns={2} gap={6}>
             {twins.map((twin, i) => (
-              <TwinCard 
-                key={i} 
+              <TwinCard
+                key={i}
                 icon={twin.icon}
                 name={twin.name}
                 acronym={twin.acronym}
@@ -76,7 +76,7 @@ const Platform = () => {
         </Container>
       </section>
 
-      <CTA 
+      <CTA
         title="Ready to deploy your Digital Twin?"
         buttonText="Request Demo"
         buttonLink="/contact"
