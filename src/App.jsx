@@ -26,24 +26,16 @@ function App() {
             <Route path="/solutions" element={<Solutions />} />
             <Route path="/industries" element={<Industries />} />
             <Route path="/industries/:id" element={<IndustryDetail />} />
-            {/* <Route path="/platform" element={<ComingSoon />} />            
-            <Route path="/why-us" element={<ComingSoon />} />            
-            <Route path="/about" element={<ComingSoon />} />            */}
-            {/* <Route path="/insights" element={<ComingSoon />} /> */}
-            {/* <Route path="/contact" element={<Contact />} />
-            <Route path="/services" element={<ComingSoon />} />
-            <Route path="/products" element={<ComingSoon />} />
-            <Route path="/sustainability" element={<ComingSoon />} /> */}
-            <Route path="*" element={<NotFound />} />
-
             <Route path="/platform" element={<Platform />} />
             <Route path="/why-us" element={<WhyUs />} />
             <Route path="/about" element={<About />} />
             <Route path="/insights" element={<Insights />} />
             <Route path="/services" element={<Industries />} />
             <Route path="/products" element={<Platform />} />
-            <Route path="/sustainability" element={<Sustainability />} />
-            <Route path="/support" element={<Support />} />
+            <Route path="/sustainability" element={<ComingSoon />} />
+            <Route path="/support" element={<ComingSoon />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </div>
         <Footer />
