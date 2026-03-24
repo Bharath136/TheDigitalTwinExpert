@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const SectionHeader = ({ title, subtitle, className = '', centered = true }) => {
+const SectionHeader = ({ title, subtitle, className = '', centered = true, showDivider = true }) => {
   return (
     <div className={`mb-12 md:mb-16 ${centered ? 'text-center' : 'text-left'} ${className}`}>
       {subtitle && (
@@ -25,13 +25,15 @@ const SectionHeader = ({ title, subtitle, className = '', centered = true }) => 
       </motion.h2>
 
       {/* Decorative divider - Siemens style */}
-      <motion.div
-        initial={{ scaleX: 0 }}
-        whileInView={{ scaleX: 1 }}
-        viewport={{ once: true }}
-        transition={{ delay: 0.2, duration: 0.5 }}
-        className={`h-1 bg-[var(--color-siemens-primary)] mt-6 ${centered ? 'w-24 mx-auto' : 'w-24'}`}
-      />
+      {showDivider && (
+        <motion.div
+          initial={{ scaleX: 0 }}
+          whileInView={{ scaleX: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.2, duration: 0.5 }}
+          className={`h-1 bg-[var(--color-siemens-primary)] mt-6 ${centered ? 'w-24 mx-auto' : 'w-24'}`}
+        />
+      )}
     </div>
   );
 };

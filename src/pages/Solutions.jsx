@@ -5,6 +5,7 @@ import Container from '../components/layout/Container';
 import PlatformSection from '../components/sections/PlatformSection';
 import CTA from '../components/common/CTA';
 import { solutionsCapabilities } from '../data/solutionsData';
+import { motion } from 'framer-motion';
 
 const solutionsHeroImg = "/images/unsplash/solutions-hero.jpg";
 
@@ -12,36 +13,42 @@ const Solutions = () => {
 
   return (
     <main>
-      <Hero 
+      <Hero
         title="What We Deliver"
         subtitle="Comprehensive digital twin solutions driving end-to-end transformation across your enterprise."
         image={solutionsHeroImg}
         height="min-h-[70vh] lg:min-h-[50vh]"
       />
-      
+
       <section className="section-padding bg-slate-50">
         <Container>
           <div className="text-center max-w-4xl mx-auto mb-16 md:mb-24">
-            <SectionHeader title="Core Capabilities" subtitle="End-to-End Solutions" />
-            <div className="w-24 h-1.5 bg-[var(--color-siemens-primary)] mx-auto mb-8 rounded-full" />
+            <SectionHeader title="Core Capabilities" subtitle="End-to-End Solutions" showDivider={false} />
+            <motion.div
+              initial={{ scaleX: 0 }}
+              whileInView={{ scaleX: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2, duration: 0.5 }}
+              className="w-24 h-1.5 bg-[var(--color-siemens-primary)] mx-auto mb-8 rounded-full"
+            />
             <p className="text-lg md:text-xl text-slate-600 leading-relaxed font-medium">
-              Empowering the Future with Intelligent Digital Twins — At The Digital Twin Experts, powered by TwinOS, we deliver end-to-end capabilities that unify data, systems, and assets into a single intelligent ecosystem — transforming how organizations design, build, and operate their assets across the entire lifecycle.
+              Empowering the Future with Intelligent Digital Twins — At The Digital Twin Experts, powered by DTwinOS, we deliver end-to-end capabilities that unify data, systems, and assets into a single intelligent ecosystem — transforming how organizations design, build, and operate their assets across the entire lifecycle.
             </p>
           </div>
-          
+
           <div className="flex flex-col gap-16 lg:gap-24">
             {solutionsCapabilities.map((cap, i) => {
               const reverse = i % 2 !== 0;
               return (
                 <div key={i} className={`flex flex-col lg:flex-row items-center gap-10 lg:gap-16 ${reverse ? 'lg:flex-row-reverse' : ''}`}>
-                  
+
                   {/* Image Side - Proportioned */}
                   <div className="w-full lg:w-5/12">
                     <div className="relative rounded-2xl overflow-hidden shadow-lg group aspect-[4/3] w-full">
                       <div className="absolute inset-0 bg-blue-600/10 group-hover:bg-transparent transition-colors duration-500 z-10 pointer-events-none"></div>
-                      <img 
-                        src={cap.image} 
-                        alt={cap.title} 
+                      <img
+                        src={cap.image}
+                        alt={cap.title}
                         className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105"
                       />
                     </div>
@@ -63,7 +70,7 @@ const Solutions = () => {
                       ))}
                     </ul>
                   </div>
-                  
+
                 </div>
               );
             })}
@@ -71,7 +78,7 @@ const Solutions = () => {
         </Container>
       </section>
 
-      <CTA 
+      <CTA
         title="Ready to transform your operations?"
         buttonText="Request Demo"
         buttonLink="/contact"

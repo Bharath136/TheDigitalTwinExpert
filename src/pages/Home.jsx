@@ -14,8 +14,8 @@ const Home = () => {
   return (
     <main>
       {/* a) Hero Section */}
-      <Hero 
-        title="Design. Build. Operate. Powered by TwinOS."
+      <Hero
+        title="Design. Build. Operate. Powered by DTwinOS."
         subtitle="Transforming assets into intelligent, living Digital Twins for a smarter, safer, and more sustainable world."
         image={heroImg}
         alignment="left"
@@ -28,7 +28,7 @@ const Home = () => {
           <Button to="/contact" variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-[var(--color-siemens-secondary)]">Contact Us</Button>
         </div>
       </Hero>
-      
+
       {/* b) Key Industries (Visual Grid) */}
       <ServicesOverview />
 
@@ -42,7 +42,7 @@ const Home = () => {
       <CaseStudies />
 
       {/* f) CTA Section */}
-      <CTA 
+      <CTA
         title="Start Your Digital Twin Journey"
         subtitle="Discover how Digital Twins can unlock operational intelligence and long-term value for your organization."
         buttonText="Request Demo"
@@ -62,7 +62,7 @@ const DTwinOSHighlights = () => (
           DTwinOS is our proprietary platform that delivers real-time asset intelligence and operational insights, transforming static assets into intelligent living systems.
         </p>
       </div>
-      
+
       <Grid columns={3} gap={6}>
         {highlightData.map((item, i) => (
           <div key={i} className="p-8 border border-white/40 rounded-2xl bg-white shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 relative group overflow-hidden">
@@ -89,7 +89,7 @@ const WhyPartnerWithUs = () => (
       <Grid columns={4} gap={6}>
         {advantageData.map((item, i) => (
           <div key={i} className="flex flex-col items-center text-center p-8 bg-sky-50/50 rounded-2xl border border-sky-100/50 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300">
-            <div className="w-14 h-14 flex items-center justify-center bg-[var(--color-siemens-primary)] text-white font-bold rounded-2xl shadow-md mb-5 text-lg">{i+1}</div>
+            <div className="w-14 h-14 flex items-center justify-center bg-[var(--color-siemens-primary)] text-white font-bold rounded-2xl shadow-md mb-5 text-lg">{i + 1}</div>
             <h4 className="text-lg font-bold text-slate-900 mb-3">{item.title}</h4>
             <p className="text-sm text-slate-600 leading-relaxed">{item.desc}</p>
           </div>
@@ -129,4 +129,3 @@ const CaseStudies = () => (
 );
 
 export default Home;
- 
