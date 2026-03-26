@@ -50,7 +50,7 @@ const About = () => {
     <main>
       <Hero
         title="Transforming the World with Digital Twins"
-        subtitle={<>We deliver AI-powered<strong> Digital Twin</strong> solutions that connect the physical and digital worlds—transforming design, construction, and operations into <strong>intelligent, data-driven ecosystems</strong></>}
+        subtitle={<>We deliver AI-powered<strong> Digital Twin</strong> solutions that connect the physical and digital worlds transforming design, construction, and operations into <strong>intelligent, data-driven ecosystems</strong></>}
         image={aboutHeroImg}
         height="min-h-[80vh] lg:min-h-[60vh]"
       />
