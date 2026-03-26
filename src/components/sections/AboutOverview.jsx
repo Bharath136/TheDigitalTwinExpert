@@ -5,7 +5,7 @@ import officeImg from '../../assets/images/shared/office.jpg';
 import teamworkImg from '../../assets/images/about/teamwork.jpg';
 import strategyImg from '../../assets/images/about/strategy.jpg';
 import earthImg from '../../assets/images/shared/earth.jpg';
-import visionImg from '../../assets/images/home/Home_Front Page.png';
+import visionImg from '../../assets/images/vision/vision.jpg';
 import missionImg from '../../assets/images/about/mission.jpg';
 import objectiveImg from '../../assets/images/about/objective.jpg';
 
@@ -80,9 +80,8 @@ const VMOSection = ({
     <div className="py-14 border-b border-slate-100">
       <Container>
         <div
-          className={`flex flex-col ${
-            reverse ? 'md:flex-row-reverse' : 'md:flex-row'
-          } gap-10 items-start`}
+          className={`flex flex-col ${reverse ? 'md:flex-row-reverse' : 'md:flex-row'
+            } gap-10 items-start`}
         >
           {/* accent bar */}
           <div
