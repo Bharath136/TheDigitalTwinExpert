@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import Hero from '../components/sections/Hero';
+import platformHeroImg from '../assets/images/heroes/dtwinos.png';
 import SectionHeader from '../components/common/SectionHeader';
 import Container from '../components/layout/Container';
 import Grid from '../components/common/Grid';
@@ -9,7 +10,7 @@ import PlatformSection from '../components/sections/PlatformSection';
 import { platformData } from '../data/platformData';
 
 // Using a placeholder background since image isn't available
-const platformHeroImg = "/images/unsplash/earth.jpg";
+
 
 const capabilities = [
   { title: "Architecture: BIM + IoT + AI", desc: "Unified data foundation merging spatial models with real-time telemetry and artificial intelligence.", icon: "🏗️" },
@@ -40,7 +41,7 @@ const Platform = () => {
       />
 
       {/* Section B - Key Capabilities */}
-      <section className="section-padding bg-white">
+      <section className="py-20 md:py-24 bg-white">
         <Container>
           <SectionHeader title="Core Engine" subtitle="Key Capabilities" />
           <Grid columns={4} gap={6}>
@@ -56,7 +57,7 @@ const Platform = () => {
       </section>
 
       {/* Section C - DTwinOS Solutions (Zig-Zag Layout) */}
-      <section className="py-8 bg-[var(--color-siemens-gray-100)]">
+      <section className="py-20 md:py-24 bg-[var(--color-siemens-gray-100)]">
         <Container>
           <SectionHeader title="Digital Twin Portfolio" subtitle="DTwinOS Solutions" />
           <p className="text-center text-body max-w-3xl mx-auto mb-8">

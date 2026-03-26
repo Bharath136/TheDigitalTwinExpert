@@ -1,97 +1,97 @@
 export const whyUsPoints = [
   {
     title: "End-to-End Digital Twin Expertise",
-    description: "We aren't just software vendors; we are digital engineering experts. We guide your transformation from strategy and design to build, operation, and lifecycle management.",
-    image: "/images/why-us/end-to-end-expertise.png"
+    description: "We deliver complete lifecycle Digital Twin solutions—from concept, BIM, and construction to operations, optimization, and asset intelligence—ensuring seamless data continuity across all phases.",
+    image: "/images/why-us/1. End-to-End Digital Twin Expertise.png"
   },
   {
-    title: "The Power of DTwinOS",
-    description: "Our proprietary DTwinOS platform connects BIM, AI, IoT, and ERP data into a single, unified command center—eliminating data silos and providing complete operational intelligence.",
-    image: "/images/why-us/power-of-dtwinos.png"
+    title: "Deep Industry Experience Across Sectors",
+    description: "Proven expertise in Built Environment & Infrastructure, Industrial, Energy, Healthcare, Transportation, and Smart Cities—tailored solutions for each domain's unique challenges.",
+    image: "/images/why-us/2. Deep Industry Experience Across Sectors.png"
   },
   {
-    title: "Proven Real-World Impact",
-    description: "Our solutions are trusted to optimize hospital operations, streamline manufacturing processes, manage smart city infrastructure, and accelerate net-zero transitions.",
-    image: "/images/why-us/proven-impact.png"
+    title: "AI-Powered DTwinOS Dashboard",
+    description: "Our proprietary DTwinOS enables real-time data integration, predictive analytics, automation, and intelligent decision-making—transforming traditional assets into smart, self-learning systems.",
+    image: "/images/why-us/3. AI-Powered DTwinOS Dashboard.png"
   },
   {
-    title: "Deep Domain Knowledge",
-    description: "We understand the nuanced demands of healthcare, energy, manufacturing, transportation, and built environments, delivering tailored solutions rather than one-size-fits-all products.",
-    image: "/images/why-us/domain-knowledge.png"
+    title: "Strong BIM & Data Integration Capability",
+    description: "Advanced integration with BIM, GIS, IoT, and enterprise systems like ACC, Autodesk Tandem, and cost management platforms—creating a unified digital ecosystem.",
+    image: "/images/why-us/4. Strong BIM & Data Integration Capability.png"
   },
   {
-    title: "Unlocking Hidden Asset Value",
-    description: "We transform static facilities into living, intelligent systems, turning your physical assets into data-driven engines for efficiency and profitability.",
-    image: "/images/why-us/hidden-asset-value.png"
+    title: "Improved Operational Efficiency",
+    description: "Optimize asset performance, reduce downtime, and increase lifecycle efficiency through data-driven insights and predictive maintenance strategies.",
+    image: "/images/why-us/5. Improved Operational Efficiency.png"
   },
   {
-    title: "Vendor-Agnostic Integration",
-    description: "We integrate seamlessly with your existing tech stack (Bentley, Autodesk, SAP, Oracle, AWS, etc.), protecting your current investments while unlocking new capabilities.",
-    image: "/images/why-us/vendor-agnostic.png"
+    title: "Cost Optimization & ROI Focus",
+    description: "Deliver measurable value by reducing operational costs, minimizing rework, optimizing resources, and enabling better capital planning and asset management.",
+    image: "/images/why-us/6. Cost Optimization & ROI Focus.png"
   },
   {
-    title: "Actionable AI & Predictive Insights",
-    description: "We don't just show you data; our AI engines predict failures, simulate 'what-if' scenarios, and provide prescriptive recommendations to optimize performance before issues occur.",
-    image: "/images/why-us/actionable-ai.png"
+    title: "Scalable & Interoperable Solutions",
+    description: "Our architecture is built on open standards, allowing seamless scalability and interoperability across multiple systems, platforms, and geographies.",
+    image: "/images/why-us/7. Scalable & Interoperable Solutions.png"
   },
   {
-    title: "Scalability from Asset to Enterprise",
-    description: "Whether you need a digital twin of a single HVAC system, a multi-building campus, or an entire smart city, our architecture scales dynamically.",
-    image: "/images/why-us/scalability.png"
+    title: "Real-Time Monitoring & Control",
+    description: "Enable command centers for real-time visualization, monitoring, and control of assets—supporting proactive decision-making and faster response times.",
+    image: "/images/why-us/8. Real-Time Monitoring & Control.png"
   },
   {
-    title: "Commitment to Sustainability",
-    description: "Our Sustainability Digital Twins actively track carbon emissions, optimize energy consumption, and provide the exact data needed for rigorous ESG reporting and net-zero compliance.",
-    image: "/images/why-us/sustainability-commitment.png"
+    title: "Predictive & Prescriptive Intelligence",
+    description: "Move beyond monitoring—our AI-driven models predict failures, recommend actions, and automate decision workflows for smarter operations.",
+    image: "/images/why-us/9. Predictive & Prescriptive Intelligence.png"
   },
   {
-    title: "Global Ecosystem & Partnerships",
-    description: "We leverage a worldwide network of technology partners, researchers, and early adopters, ensuring our clients always benefit from the absolute latest innovations.",
-    image: "/images/why-us/global-ecosystem.png"
+    title: "Sustainability & Net-Zero Enablement",
+    description: "Track energy consumption, carbon footprint, and environmental impact—helping organizations achieve sustainability goals and regulatory compliance.",
+    image: "/images/why-us/10. Sustainability & Net-Zero Enablement.png"
   },
   {
-    title: "Rapid Deployment & ROI",
-    description: "Through our standardized frameworks and pre-built industry modules within DTwinOS, we significantly reduce deployment time and accelerate time-to-value.",
-    image: "/images/why-us/rapid-deployment.png"
+    title: "Future-Ready Digital Transformation",
+    description: "We help organizations transition into Industry 4.0 by embedding AI, IoT, and automation into their core operations.",
+    image: "/images/why-us/11. Future-Ready Digital Transformation.png"
   },
   {
-    title: "Future-Proof Architectures",
-    description: "Our cloud-native, API-first platforms are built to adapt. As new technologies like GenAI, edge computing, or advanced robotics evolve, your Digital Twin evolves with them.",
-    image: "/images/why-us/future-proof.png"
+    title: "Expert Team & Global Collaboration",
+    description: "Backed by experienced BIM Managers, Digital Twin specialists, and AI engineers—ensuring high-quality delivery and innovation.",
+    image: "/images/why-us/12. Expert Team & Global Collaboration.png"
   },
   {
-    title: "Uncompromising Security & Privacy",
-    description: "We engineer enterprise-grade cybersecurity into the core of DTwinOS, ensuring your sensitive operational data, patient records, or IP remain fully protected.",
-    image: "/images/why-us/security-privacy.png"
+    title: "Customizable & Modular Approach",
+    description: "Flexible frameworks tailored to your business needs—whether starting small or implementing enterprise-scale Digital Twin ecosystems.",
+    image: "/images/why-us/13. Customizable & Modular Approach.png"
   },
   {
-    title: "Comprehensive Workforce Upskilling",
-    description: "We ensure adoption succeeds by providing rigorous training, change management support, and interactive digital twin environments to upskill your workforce.",
-    image: "/images/why-us/workforce-upskilling.png"
+    title: "Faster Project Delivery & Reduced Risk",
+    description: "Identify clashes, inefficiencies, and risks early through digital simulation—reducing delays and improving project certainty.",
+    image: "/images/why-us/14. Faster Project Delivery & Reduced Risk.png"
   },
   {
-    title: "Data Standardization & Governance",
-    description: "We bring order to chaotic data environments, establishing clear ontologies and standards so you have a Single Source of Truth you can actually trust.",
-    image: "/images/why-us/data-standardization.png"
+    title: "Training & Capability Building",
+    description: "We don't just deliver solutions—we empower your teams through structured training, upskilling, and knowledge transfer programs.",
+    image: "/images/why-us/15. Training & Capability Building.png"
   },
   {
-    title: "Bridging the Physical-Digital Divide",
-    description: "We effectively fuse real-time IoT telemetry with incredibly detailed 3D/BIM spatial contexts, providing unparalleled situational awareness.",
-    image: "/images/why-us/physical-digital-divide.png"
+    title: "Strong Partnership Ecosystem",
+    description: "Collaborate with technology providers, asset owners, EPCs, academia, and governments to drive innovation and adoption at scale.",
+    image: "/images/why-us/16. Strong Partnership Ecosystem.png"
   },
   {
-    title: "Custom Digital Engineering",
-    description: "When off-the-shelf won’t work, our specialized engineers build bespoke digital solutions precisely engineered for your unique operational bottlenecks.",
-    image: "/images/why-us/custom-engineering.png"
+    title: "Lifecycle Asset Intelligence",
+    description: "Transform static assets into intelligent, data-driven systems that continuously learn, adapt, and improve over time.",
+    image: "/images/why-us/17. Lifecycle Asset Intelligence.png"
   },
   {
-    title: "Dedicated Customer Success",
-    description: "Your success is our KPI. Our dedicated support teams work continuously alongside you to ensure your digital twins drive ongoing, measurable business transformation.",
-    image: "/images/why-us/customer-success.png"
+    title: "Command Center & Digital Operations Hub",
+    description: "Enable centralized control rooms for entire asset portfolios—integrating all systems into one intelligent dashboard.",
+    image: "/images/why-us/18. Command Center & Digital Operations Hub.png"
   },
   {
-    title: "We Build the Connected Future",
-    description: "Partnering with us means you aren't just buying software; you are investing in a digitally intelligent future where your assets run smarter, safer, and cleaner.",
-    image: "/images/why-us/connected-future.png"
+    title: "Competitive Advantage Through Innovation",
+    description: "Stay ahead of the market with cutting-edge technologies that differentiate your organization and future-proof your investments.",
+    image: "/images/why-us/19. Competitive Advantage Through Innovation.png"
   }
 ];

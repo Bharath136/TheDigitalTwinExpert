@@ -20,7 +20,7 @@ const Solutions = () => {
         height="min-h-[70vh] lg:min-h-[50vh]"
       />
 
-      <section className="section-padding bg-slate-50">
+      <section className="py-20 md:py-24 bg-slate-50">
         <Container>
           <div className="text-center max-w-4xl mx-auto mb-16 md:mb-24">
             <SectionHeader title="Core Capabilities" subtitle="End-to-End Solutions" showDivider={false} />

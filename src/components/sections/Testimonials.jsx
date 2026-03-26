@@ -26,7 +26,7 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <section className="section-padding bg-[#f0f4f8]">
+    <section className="py-20 md:py-24 bg-[#f0f4f8]">
       <Container>
         <SectionHeader
           title="What Our Clients Say"

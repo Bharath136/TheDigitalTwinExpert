@@ -23,7 +23,7 @@ const EcosystemSection = ({
   introText = defaultIntroText,
 }) => {
   return (
-    <section className="section-padding bg-[#f0f7ff]" id="ecosystem">
+    <section className="py-20 md:py-24 bg-[#f0f7ff]" id="ecosystem">
       <Container>
         <SectionHeader title={title} subtitle="" />
 

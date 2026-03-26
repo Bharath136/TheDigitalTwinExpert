@@ -45,7 +45,7 @@ const Sustainability = () => {
         height="min-h-[70vh]"
       />
 
-      <section className="py-24 bg-white">
+      <section className="py-20 md:py-24 bg-white">
         <Container>
           <SectionHeader
             title="Building a Greener Future with DTwinOS"
@@ -69,7 +69,7 @@ const Sustainability = () => {
         </Container>
       </section>
 
-      <section className="py-24 bg-slate-900 text-white">
+      <section className="py-20 md:py-24 bg-slate-900 text-white">
         <Container>
           <div className="flex flex-col lg:flex-row items-center gap-16">
             <div className="lg:w-1/2">
@@ -108,7 +108,7 @@ const Sustainability = () => {
         </Container>
       </section>
 
-      <section className="py-24 bg-white overflow-hidden">
+      <section className="py-20 md:py-24 bg-white overflow-hidden">
         <Container>
           <div className="bg-[var(--color-siemens-primary)] rounded-3xl p-12 lg:p-20 relative text-white text-center">
             <div className="relative z-10 max-w-3xl mx-auto">

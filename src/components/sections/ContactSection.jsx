@@ -7,7 +7,7 @@ import { contactData } from '../../config/contactData';
 
 const ContactSection = () => {
   return (
-    <section className="section-padding bg-white">
+    <section className="py-20 md:py-24 bg-white">
       <Container>
         <SectionHeader 
           title="Get in Touch" 

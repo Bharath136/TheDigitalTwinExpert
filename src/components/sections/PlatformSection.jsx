@@ -14,7 +14,7 @@ const PlatformSection = ({ data, reverse = false, hideLink = false, showFeatures
   const { title, subtitle, description, image, features, footerText, id } = data;
 
   return (
-    <section className={`py-16 md:py-24 ${reverse ? 'bg-slate-50' : 'bg-white'}`} id={id}>
+    <section className={`py-20 md:py-24 ${reverse ? 'bg-slate-50' : 'bg-white'}`} id={id}>
       <Container>
         <div className={`flex flex-col lg:flex-row gap-12 items-center ${reverse ? 'lg:flex-row-reverse' : ''}`}>
           

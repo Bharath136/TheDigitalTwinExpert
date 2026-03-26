@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import Hero from '../components/sections/Hero';
+import insightsHeroImg from '../assets/images/heroes/insights.png';
 import SectionHeader from '../components/common/SectionHeader';
 import Container from '../components/layout/Container';
 import Grid from '../components/common/Grid';
 import CTA from '../components/common/CTA';
 
 // Using a placeholder image since insights/hero.jpg doesn't exist yet
-const insightsHeroImg = "/images/unsplash/insights-hero.jpg";
+
 
 const categories = ['All', 'Blogs', 'Case Studies', 'Whitepapers', 'Industry Trends'];
 
@@ -36,7 +37,7 @@ const Insights = () => {
       />
 
       {/* Featured Section: Future of Digital Twins */}
-      <section className="bg-[var(--color-siemens-primary)] text-white py-20 relative overflow-hidden">
+      <section className="bg-[var(--color-siemens-primary)] text-white py-20 md:py-24 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10 bg-[url('/images/unsplash/earth.jpg')] bg-cover bg-center"></div>
         <Container className="relative z-10">
           <div className="max-w-4xl mx-auto text-center">
@@ -55,7 +56,7 @@ const Insights = () => {
       </section>
 
       {/* Hub Categories */}
-      <section className="section-padding bg-slate-50">
+      <section className="py-20 md:py-24 bg-slate-50">
         <Container>
           <SectionHeader title="Knowledge Base" subtitle="Explore Our Content Hub" align="center" />
           

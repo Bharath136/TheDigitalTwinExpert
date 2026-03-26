@@ -5,7 +5,7 @@ import EcosystemSection from '../components/sections/EcosystemSection';
 import CTA from '../components/common/CTA';
 import Container from '../components/layout/Container';
 import SectionHeader from '../components/common/SectionHeader';
-import aboutHeroImg from '../assets/images/about/hero.jpg';
+import aboutHeroImg from '../assets/images/about/about_hero_bg.png';
 
 const products = [
   "Healthcare Digital Twin (HDT)",
@@ -19,7 +19,7 @@ const products = [
 ];
 
 const AboutProductsSection = () => (
-  <section className="section-padding bg-slate-50 border-t border-slate-200">
+  <section className="py-20 md:py-24 bg-slate-50 border-t border-slate-200">
     <Container>
       <SectionHeader title="Products & Services" subtitle="Our DTwinOS Offerings" />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto mb-16">
@@ -49,8 +49,8 @@ const About = () => {
   return (
     <main>
       <Hero 
-        title="Pioneering Digital Infrastructure"
-        subtitle="Driven by innovation, expertise, and a commitment to creating a more connected and sustainable world."
+        title="Transforming the World with Digital Twins"
+        subtitle={<>We deliver <strong>AI-powered (Digital Twin)</strong> solutions that connect the physical and digital worlds—transforming design, construction, and operations into <strong>(intelligent, data-driven ecosystems)</strong></>}
         image={aboutHeroImg}
         height="min-h-[80vh] lg:min-h-[60vh]"
       />

@@ -5,7 +5,7 @@ import officeImg from '../../assets/images/shared/office.jpg';
 import teamworkImg from '../../assets/images/about/teamwork.jpg';
 import strategyImg from '../../assets/images/about/strategy.jpg';
 import earthImg from '../../assets/images/shared/earth.jpg';
-import visionImg from '../../assets/images/about/vision.jpg';
+import visionImg from '../../assets/images/home/Home_Front Page.png';
 import missionImg from '../../assets/images/about/mission.jpg';
 import objectiveImg from '../../assets/images/about/objective.jpg';
 
@@ -39,10 +39,12 @@ const VMOSection = ({
   imageAlt,
   reverse = false,
   bgClass = 'bg-white',
+  bannerHeightClass = 'h-72 md:h-96',
+  titleClass = 'text-3xl md:text-4xl lg:text-5xl',
 }) => (
   <section id={id} className={`scroll-mt-28 ${bgClass}`}>
     {/* full-bleed image banner */}
-    <div className="w-full h-72 md:h-96 relative overflow-hidden">
+    <div className={`w-full ${bannerHeightClass} relative overflow-hidden`}>
       <img
         src={image}
         alt={imageAlt}
@@ -60,12 +62,12 @@ const VMOSection = ({
       {/* pill + headline on the banner */}
       <div className="absolute inset-0 flex flex-col items-center justify-center px-6 text-center">
         <span
-          className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4"
+          className="inline-flex items-center gap-2 text-sm md:text-base font-extrabold uppercase tracking-[0.15em] px-6 py-2.5 rounded-full mb-6 shadow-sm ring-1 ring-white/20"
           style={{ background: accent, color: '#fff' }}
         >
-          <Icon size={14} /> {tag}
+          <Icon size={18} strokeWidth={2.5} /> {tag}
         </span>
-        <h2 className="text-white text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight max-w-3xl drop-shadow-lg">
+        <h2 className={`text-white ${titleClass} font-extrabold leading-tight max-w-3xl drop-shadow-lg`}>
           {title}
         </h2>
       </div>
@@ -84,7 +86,7 @@ const VMOSection = ({
             className="hidden md:block w-1.5 shrink-0 self-stretch rounded-full"
             style={{ background: accent }}
           />
-          <div className="flex-1 text-body text-slate-600 leading-relaxed text-lg">
+          <div className="flex-1 text-body text-slate-700 leading-relaxed text-lg lg:text-xl font-medium">
             {children}
           </div>
         </div>
@@ -100,7 +102,7 @@ const AboutOverview = () => {
   return (
     <>
       {/* ── Intro strip ─────────────────────────────────────── */}
-      <section className="section-padding bg-white">
+      <section className="py-20 md:py-24 bg-white">
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -125,12 +127,11 @@ const AboutOverview = () => {
                 Who We Are
               </h2>
               <div className="h-1 w-24 bg-[var(--color-siemens-primary)] mb-8" />
+              <p className="text-body mb-4 text-lg leading-relaxed text-slate-700">
+                The Digital Twin Experts is a next-generation technology company delivering AI-powered Digital Twin solutions that redefine how assets, infrastructure, and ecosystems are designed, built, and operated.
+              </p>
               <p className="text-body mb-6 text-lg leading-relaxed text-slate-700">
-                We are a global Digital Twin transformation company specializing
-                in AI-powered ecosystems for infrastructure, cities, healthcare,
-                energy, and industry. Our platform, DTwinOS, acts as the
-                operating system for Digital Twins, connecting data, systems,
-                and assets into one intelligent, unified environment.
+                By integrating BIM, Digital Engineering, IoT, Data Analytics, and Artificial Intelligence, we create intelligent, real-time Digital Twins that empower organizations to make smarter decisions, optimize performance, and maximize value across the entire asset lifecycle.
               </p>
             </div>
 
@@ -172,10 +173,12 @@ const AboutOverview = () => {
         tag="Our Vision"
         Icon={FiEye}
         accent="#009999"
-        title="A Digitally Intelligent World"
+        title="Single Intelligent Digital Twin Ecosystem."
         image={visionImg}
-        imageAlt="Smart city digital twin vision"
+        imageAlt="Digital Twin command center with Smart City visualization"
         bgClass="bg-[#f0fafa]"
+        bannerHeightClass="h-96 md:h-[32rem]"
+        titleClass="text-4xl md:text-5xl lg:text-6xl"
       >
         We exist to create a digitally intelligent world by unifying data
         across the physical and digital domains into a single intelligent
@@ -195,11 +198,13 @@ const AboutOverview = () => {
         imageAlt="Engineering team collaborating on digital twin mission"
         bgClass="bg-white"
         reverse
+        bannerHeightClass="h-96 md:h-[32rem]"
+        titleClass="text-4xl md:text-5xl lg:text-6xl"
       >
         Through AI-powered Digital Twins, BIM, and intelligent data
         integration, we design, build, and operate a connected future —
         transforming assets from villages to megacities into living,
-        self-optimizing systems powered by TwinOS.
+        self-optimizing systems powered by <strong>DtwinOS (Powered by Smart Dashboards)</strong>.
       </VMOSection>
 
       {/* ── Our Objective ───────────────────────────────────── */}
@@ -221,7 +226,7 @@ const AboutOverview = () => {
 
 
       {/* ── Global Impact / Stats ───────────────────────────── */}
-      <section className="py-20 bg-[var(--color-siemens-secondary)] relative overflow-hidden">
+      <section className="py-20 md:py-24 bg-[var(--color-siemens-secondary)] relative overflow-hidden">
         <div
           className="absolute inset-0 opacity-10 bg-cover bg-center mix-blend-overlay"
           style={{ backgroundImage: `url(${earthImg})` }}
@@ -246,7 +251,7 @@ const AboutOverview = () => {
       </section>
 
       {/* ── Key Use Cases ───────────────────────────────────── */}
-      <section className="py-20 bg-white">
+      <section className="py-20 md:py-24 bg-white">
         <Container>
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">

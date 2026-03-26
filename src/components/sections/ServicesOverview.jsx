@@ -13,7 +13,7 @@ const ServicesOverview = () => {
   };
 
   return (
-    <section className="bg-[var(--color-siemens-gray-100)] section-padding">
+    <section className="bg-[var(--color-siemens-gray-100)] py-20 md:py-24">
       <Container>
         <SectionHeader 
           title="Digital Twins for Every Industry" 

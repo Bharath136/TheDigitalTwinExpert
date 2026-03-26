@@ -3,7 +3,7 @@ import Hero from '../components/sections/Hero';
 import Container from '../components/layout/Container';
 import PlatformSection from '../components/sections/PlatformSection';
 import CTA from '../components/common/CTA';
-import aboutHeroImg from '../assets/images/about/hero.jpg';
+import aboutHeroImg from '../assets/images/heroes/whyus.png';
 import { whyUsPoints } from '../data/whyUsData';
 
 const WhyUs = () => {
@@ -16,7 +16,7 @@ const WhyUs = () => {
         height="min-h-[60vh] lg:min-h-[40vh]"
       />
 
-      <section className="py-24 bg-slate-50 border-t border-gray-200">
+      <section className="py-20 md:py-24 bg-slate-50 border-t border-gray-200">
         <Container>
           <div className="text-center max-w-4xl mx-auto mb-16 md:mb-24">
             <h2 className="text-slate-500 font-bold uppercase tracking-widest text-sm mb-4">Unmatched Value</h2>

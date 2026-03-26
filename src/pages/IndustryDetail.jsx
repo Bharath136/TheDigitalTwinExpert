@@ -47,7 +47,7 @@ const IndustryDetail = () => {
       </section>
 
       {/* SECTION 2 — Overcome Industry Challenges */}
-      <section className="py-20 bg-slate-50 border-b border-gray-200">
+      <section className="py-20 md:py-24 bg-slate-50 border-b border-gray-200">
         <Container>
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6 font-display leading-tight">
@@ -71,7 +71,7 @@ const IndustryDetail = () => {
       </section>
 
       {/* SECTION 3 — Core Capabilities for This Industry */}
-      <section className="py-20 bg-white">
+      <section className="py-20 md:py-24 bg-white">
         <Container>
           <div className="max-w-4xl mx-auto mb-16">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">Core Capabilities</h2>
@@ -104,7 +104,7 @@ const IndustryDetail = () => {
       </section>
 
       {/* SECTION 4 — DTwinOS Solution for This Industry */}
-      <section className="py-24 bg-[var(--color-siemens-secondary)] relative overflow-hidden">
+      <section className="py-20 md:py-24 bg-[var(--color-siemens-secondary)] relative overflow-hidden">
         <Container className="relative z-10">
           <div className="bg-white rounded-xl shadow-2xl p-10 md:p-14 max-w-4xl mx-auto border-t-8 border-[var(--color-siemens-primary)] text-center">
             <span className="text-6xl mb-6 block">{industry.twinLogo}</span>
@@ -125,7 +125,7 @@ const IndustryDetail = () => {
       </section>
 
       {/* SECTION 5 — CTA Footer Banner */}
-      <section className="py-20 bg-[var(--color-siemens-primary)]">
+      <section className="py-20 md:py-24 bg-[var(--color-siemens-primary)]">
         <Container>
           <div className="flex flex-col md:flex-row items-center justify-between gap-8 text-white">
             <div className="max-w-2xl">

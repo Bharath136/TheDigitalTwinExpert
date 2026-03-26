@@ -6,7 +6,7 @@ import SectionHeader from '../components/common/SectionHeader';
 import Grid from '../components/common/Grid';
 import CTA from '../components/common/CTA';
 import Button from '../components/common/Button';
-import heroImg from '../assets/images/home/hero.jpg';
+import heroImg from '../assets/images/home/Home_Front Page.png';
 import { highlightData, advantageData, caseStudiesData } from '../data/homeData';
 
 const Home = () => {
@@ -20,9 +20,9 @@ const Home = () => {
         image={heroImg}
         alignment="left"
       >
-        <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl leading-relaxed">
+        {/* <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl leading-relaxed">
           At The Digital Twin Experts, we unify BIM, AI, and Digital Twin technologies into a single intelligent ecosystem — enabling organizations to design smarter, build faster, and operate more efficiently across the entire asset lifecycle.
-        </p>
+        </p> */}
         <div className="flex flex-wrap gap-4 mt-8">
           <Button to="/industries" variant="primary" size="lg">Explore Industries</Button>
           <Button to="/contact" variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-[var(--color-siemens-secondary)]">Contact Us</Button>
@@ -53,7 +53,7 @@ const Home = () => {
 };
 
 const DTwinOSHighlights = () => (
-  <section className="py-20 bg-[var(--color-siemens-secondary)] text-slate-900 border-t border-[var(--color-siemens-primary)]/20">
+  <section className="py-20 md:py-24 bg-[var(--color-siemens-secondary)] text-slate-900 border-t border-[var(--color-siemens-primary)]/20">
     <Container>
       <div className="text-center max-w-3xl mx-auto mb-16">
         <h2 className="text-[var(--color-siemens-primary)] font-semibold tracking-wider uppercase text-sm mb-4 block">Core Technology</h2>
@@ -78,7 +78,7 @@ const DTwinOSHighlights = () => (
 );
 
 const WhyPartnerWithUs = () => (
-  <section className="py-24 bg-white">
+  <section className="py-20 md:py-24 bg-white">
     <Container>
       <SectionHeader title="Our Advantage" subtitle="Why Partner With Us?" />
       <div className="text-center max-w-2xl mx-auto mb-16">
@@ -103,7 +103,7 @@ const WhyPartnerWithUs = () => (
 );
 
 const CaseStudies = () => (
-  <section className="py-24 bg-[var(--color-siemens-gray-100)] border-t border-gray-200">
+  <section className="py-20 md:py-24 bg-[var(--color-siemens-gray-100)] border-t border-gray-200">
     <Container>
       <SectionHeader title="Proven Results" subtitle="Case Studies & Use Cases" />
       <Grid columns={2} gap={8}>
