@@ -56,7 +56,7 @@ const VMOSection = ({
         className="absolute inset-0"
         style={{
           background:
-            'linear-gradient(to bottom, rgba(2,20,55,0.45) 0%, rgba(2,20,55,0.72) 100%)',
+            'linear-gradient(to bottom, rgba(2,20,55,0.55) 0%, rgba(2,20,55,0.80) 100%)',
         }}
       />
       {/* pill + headline on the banner */}
@@ -67,7 +67,10 @@ const VMOSection = ({
         >
           <Icon size={18} strokeWidth={2.5} /> {tag}
         </span>
-        <h2 className={`text-white ${titleClass} font-extrabold leading-tight max-w-3xl drop-shadow-lg`}>
+        <h2
+          className={`text-white ${titleClass} font-extrabold leading-tight max-w-3xl drop-shadow-lg`}
+          style={{ textShadow: '0 2px 16px rgba(0,0,0,0.5), 0 1px 3px rgba(0,0,0,0.3)' }}
+        >
           {title}
         </h2>
       </div>

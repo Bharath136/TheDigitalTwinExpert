@@ -35,10 +35,16 @@ const IndustryDetail = () => {
             <span className="text-[var(--color-siemens-primary)]">{industry.name}</span>
           </div>
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6 drop-shadow-md leading-tight">
+            <h1
+              className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6 drop-shadow-md leading-tight"
+              style={{ textShadow: '0 2px 16px rgba(0,0,0,0.5), 0 1px 3px rgba(0,0,0,0.3)' }}
+            >
               {industry.name}
             </h1>
-            <p className="text-lg md:text-xl text-white/90 mb-10 leading-relaxed font-light">
+            <p
+              className="text-lg md:text-xl text-white/90 mb-10 leading-relaxed font-light"
+              style={{ textShadow: '0 1px 8px rgba(0,0,0,0.4)' }}
+            >
               {industry.desc}
             </p>
             <Button to="/contact" variant="primary" size="lg">Contact Us</Button>

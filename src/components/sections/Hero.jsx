@@ -9,7 +9,7 @@ const Hero = ({
   height = 'min-h-[100vh] lg:min-h-[80vh]', 
   alignment = 'center',
   children,
-  overlayOpacity = 'bg-black/40'
+  overlayOpacity = 'bg-black/50'
 }) => {
   const isLeftAligned = alignment === 'left';
 
@@ -24,6 +24,7 @@ const Hero = ({
             className="w-full h-full object-cover object-center"
           />
           <div className={`absolute inset-0 ${overlayOpacity}`} />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
         </div>
       )}
 
@@ -37,6 +38,7 @@ const Hero = ({
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="heading-hero text-white mb-6 tracking-tight"
+            style={{ textShadow: '0 2px 16px rgba(0,0,0,0.5), 0 1px 3px rgba(0,0,0,0.3)' }}
           >
             {title}
           </motion.h1>
@@ -47,6 +49,7 @@ const Hero = ({
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               className={`text-xl md:text-2xl text-gray-200 mb-10 ${isLeftAligned ? 'mr-auto' : 'mx-auto'}`}
+              style={{ textShadow: '0 1px 8px rgba(0,0,0,0.4)' }}
             >
               {subtitle}
             </motion.p>

@@ -10,8 +10,7 @@ const WhyUs = () => {
   return (
     <main>
       <Hero
-        title="The TDTE Advantage"
-        subtitle="Why Partner With The Digital Twin Experts?"
+        title="Why Partner With The Digital Twin Experts?"
         image={aboutHeroImg}
         height="min-h-[60vh] lg:min-h-[40vh]"
       />
