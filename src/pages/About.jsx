@@ -48,19 +48,19 @@ const About = () => {
 
   return (
     <main>
-      <Hero 
+      <Hero
         title="Transforming the World with Digital Twins"
-        subtitle={<>We deliver <strong>AI-powered (Digital Twin)</strong> solutions that connect the physical and digital worlds—transforming design, construction, and operations into <strong>(intelligent, data-driven ecosystems)</strong></>}
+        subtitle={<>We deliver AI-powered<strong> Digital Twin</strong> solutions that connect the physical and digital worlds—transforming design, construction, and operations into <strong>intelligent, data-driven ecosystems</strong></>}
         image={aboutHeroImg}
         height="min-h-[80vh] lg:min-h-[60vh]"
       />
-      
+
       <AboutOverview />
       <EcosystemSection />
-      
+
       <AboutProductsSection />
-      
-      <CTA 
+
+      <CTA
         title="Join Our Growing Ecosystem"
         subtitle="We collaborate with owners, operators, EPCs, providers, and governments to build a strong Digital Twin ecosystem."
         buttonText="View Capabilities"
