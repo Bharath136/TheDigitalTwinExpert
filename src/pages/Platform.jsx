@@ -68,10 +68,10 @@ const Platform = () => {
 
       {/* Zig-Zag Sections mapping through platformData */}
       {platformData.map((data, index) => (
-        <PlatformSection 
-          key={data.id} 
-          data={data} 
-          reverse={index % 2 !== 0} 
+        <PlatformSection
+          key={data.id}
+          data={data}
+          reverse={index % 2 !== 0}
         />
       ))}
 

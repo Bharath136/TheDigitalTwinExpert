@@ -12,11 +12,29 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
+  const [openDropdown, setOpenDropdown] = useState(null);
+  const dropdownTimers = useRef({});
   const searchInputRef = useRef(null);
   const location = useLocation();
 
   const toggleMobileMenu = (menuName) => {
     setActiveMobileMenu(activeMobileMenu === menuName ? null : menuName);
+  };
+
+  const handleMouseEnterNav = (name) => {
+    // Cancel any pending close timer for this dropdown
+    if (dropdownTimers.current[name]) {
+      clearTimeout(dropdownTimers.current[name]);
+      dropdownTimers.current[name] = null;
+    }
+    setOpenDropdown(name);
+  };
+
+  const handleMouseLeaveNav = (name) => {
+    // Delay closing so user has time to move cursor into the dropdown
+    dropdownTimers.current[name] = setTimeout(() => {
+      setOpenDropdown((current) => (current === name ? null : current));
+    }, 500);
   };
 
   useEffect(() => {
@@ -115,63 +133,81 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden xl:flex items-center gap-4 lg:gap-6 ml-auto mr-6">
-            {navLinks.map((link) => (
-              <div key={link.name} className="relative group">
-                <Link
-                  to={link.path}
-                  className={`text-sm font-semibold uppercase tracking-wider transition-colors duration-300 flex items-center gap-1 py-4 ${isActive(link.path)
-                    ? (isScrolled ? 'text-[var(--color-siemens-primary)]' : 'text-white')
-                    : (isScrolled ? 'text-slate-700 hover:text-[var(--color-siemens-primary)]' : 'text-white/80 hover:text-white')
-                    }`}
+            {navLinks.map((link) => {
+              const isDropdownOpen = openDropdown === link.name;
+              return (
+                <div
+                  key={link.name}
+                  className="relative"
+                  onMouseEnter={() => link.children && handleMouseEnterNav(link.name)}
+                  onMouseLeave={() => link.children && handleMouseLeaveNav(link.name)}
                 >
-                  {link.name}
-                  {link.children && (
-                    <svg className="w-4 h-4 ml-0.5 opacity-70 group-hover:rotate-180 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
+                  <Link
+                    to={link.path}
+                    className={`text-sm font-semibold uppercase tracking-wider transition-colors duration-300 flex items-center gap-1 py-4 ${isActive(link.path)
+                      ? (isScrolled ? 'text-[var(--color-siemens-primary)]' : 'text-white')
+                      : (isScrolled ? 'text-slate-700 hover:text-[var(--color-siemens-primary)]' : 'text-white/80 hover:text-white')
+                      }`}
+                  >
+                    {link.name}
+                    {link.children && (
+                      <svg className={`w-4 h-4 ml-0.5 opacity-70 transition-transform duration-300 ${isDropdownOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
+                    )}
+                  </Link>
+
+                  {/* Dropdown Menu */}
+                  {link.children && !link.isMegaMenu && (
+                    <div
+                      className={`absolute top-full left-0 w-64 pt-1 transition-all duration-200 ${isDropdownOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-1 pointer-events-none'
+                        }`}
+                    >
+                      <div className="bg-white shadow-xl rounded-b-sm border-t-2 border-[var(--color-siemens-primary)]">
+                        <div className="py-2">
+                          {link.children.map((child) => (
+                            <Link
+                              key={child.name}
+                              to={child.path}
+                              className="block px-5 py-3 text-sm font-medium text-slate-700 hover:bg-slate-50 hover:text-[var(--color-siemens-primary)] transition-colors border-b border-gray-50 last:border-0"
+                            >
+                              {child.name}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
                   )}
-                </Link>
 
-                {/* Dropdown Menu */}
-                {link.children && !link.isMegaMenu && (
-                  <div className="absolute top-full left-0 w-64 bg-white shadow-xl rounded-b-sm border-t-2 border-[var(--color-siemens-primary)] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform -translate-y-2 group-hover:translate-y-0">
-                    <div className="py-2">
-                      {link.children.map((child) => (
-                        <Link
-                          key={child.name}
-                          to={child.path}
-                          className="block px-5 py-3 text-sm font-medium text-slate-700 hover:bg-slate-50 hover:text-[var(--color-siemens-primary)] transition-colors border-b border-gray-50 last:border-0"
-                        >
-                          {child.name}
-                        </Link>
-                      ))}
+                  {/* Mega Menu for Platform */}
+                  {link.children && link.isMegaMenu && (
+                    <div
+                      className={`absolute top-full left-1/2 -translate-x-1/2 w-[900px] pt-1 transition-all duration-200 ${isDropdownOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-1 pointer-events-none'
+                        }`}
+                    >
+                      <div className="bg-gray-50 shadow-2xl rounded-b-lg border-t-4 border-[var(--color-siemens-primary)] p-8">
+                        <div className="flex justify-between items-center border-b border-gray-200 pb-4 mb-6">
+                          <h3 className="text-xl font-bold text-slate-800">DTwinOS Solutions</h3>
+                          <Link to="/platform" className="text-sm font-semibold text-[var(--color-siemens-primary)] hover:underline flex items-center gap-1">
+                            View All Platform Capabilities <FiExternalLink />
+                          </Link>
+                        </div>
+                        <div className="grid grid-cols-2 gap-4">
+                          {link.children.map((twin) => (
+                            <TwinCard
+                              key={twin.name}
+                              icon={twin.icon}
+                              name={twin.name}
+                              acronym={twin.acronym}
+                              description={twin.desc}
+                              link={twin.path}
+                            />
+                          ))}
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                )}
-
-                {/* Mega Menu for Platform */}
-                {link.children && link.isMegaMenu && (
-                  <div className="absolute top-full left-1/2 -translate-x-1/2 w-[900px] bg-gray-50 shadow-2xl rounded-b-lg border-t-4 border-[var(--color-siemens-primary)] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform -translate-y-2 group-hover:translate-y-0 p-8">
-                    <div className="flex justify-between items-center border-b border-gray-200 pb-4 mb-6">
-                      <h3 className="text-xl font-bold text-slate-800">DTwinOS Solutions</h3>
-                      <Link to="/platform" className="text-sm font-semibold text-[var(--color-siemens-primary)] hover:underline flex items-center gap-1">
-                        View All Platform Capabilities <FiExternalLink />
-                      </Link>
-                    </div>
-                    <div className="grid grid-cols-2 gap-4">
-                      {link.children.map((twin) => (
-                        <TwinCard
-                          key={twin.name}
-                          icon={twin.icon}
-                          name={twin.name}
-                          acronym={twin.acronym}
-                          description={twin.desc}
-                          link={twin.path}
-                        />
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </div>
-            ))}
+                  )}
+                </div>
+              );
+            })}
           </nav>
 
           <div className="hidden md:flex items-center gap-4">
