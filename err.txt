@@ -1,0 +1,31 @@
+
+/images/circuit-bg.svg referenced in /images/circuit-bg.svg didn't resolve at build time, it will remain unchanged to be resolved at runtime
+[31m✗[39m Build failed in 2.70s
+[31merror during build:
+[31msrc/pages/Contact.jsx (3:7): "default" is not exported by "src/components/sections/ContactForm.jsx", imported by "src/pages/Contact.jsx".[31m
+file: [36mD:/Projects/company-website/src/pages/Contact.jsx:3:7[31m
+[33m
+1: import React from 'react';
+2: import Hero from '../components/sections/Hero';
+3: import ContactForm from '../components/sections/ContactForm';
+          ^
+4: import ContactSection from '../components/sections/ContactSection';
+5: import CTA from '../components/common/CTA';
+[31m
+    at getRollupError (file:///D:/Projects/company-website/node_modules/rollup/dist/es/shared/parseAst.js:402:41)
+    at error (file:///D:/Projects/company-website/node_modules/rollup/dist/es/shared/parseAst.js:398:42)
+    at Module.error (file:///D:/Projects/company-website/node_modules/rollup/dist/es/shared/node-entry.js:17040:16)
+    at Module.traceVariable (file:///D:/Projects/company-website/node_modules/rollup/dist/es/shared/node-entry.js:17452:29)
+    at ModuleScope.findVariable (file:///D:/Projects/company-website/node_modules/rollup/dist/es/shared/node-entry.js:15070:39)
+    at ReturnValueScope.findVariable (file:///D:/Projects/company-website/node_modules/rollup/dist/es/shared/node-entry.js:5673:38)
+    at FunctionBodyScope.findVariable (file:///D:/Projects/company-website/node_modules/rollup/dist/es/shared/node-entry.js:5673:38)
+    at Identifier.bind (file:///D:/Projects/company-website/node_modules/rollup/dist/es/shared/node-entry.js:5447:40)
+    at CallExpression.bind (file:///D:/Projects/company-website/node_modules/rollup/dist/es/shared/node-entry.js:2825:28)
+    at CallExpression.bind (file:///D:/Projects/company-website/node_modules/rollup/dist/es/shared/node-entry.js:12179:15)[39m
+\n
+> thedigitaltwinexpert@0.0.0 build
+> vite build
+
+[36mvite v7.3.1 [32mbuilding client environment for production...[36m[39m
+transforming...
+[32m✓[39m 492 modules transformed.
