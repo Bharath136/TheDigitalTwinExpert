@@ -1,9 +1,7 @@
 import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import Hero from '@presentation/components/sections/Hero';
-import platformHeroImg from '@presentation/assets/images/heroes/DTwinOS.png';
-import SectionHeader from '@presentation/components/common/SectionHeader';
-import Container from '@presentation/components/layout/Container';
+import platformHeroImg from '@presentation/assets/images/heroes/dtwinos.png';
 
 import CTA from '@presentation/components/common/CTA';
 import PlatformSection from '@presentation/components/sections/PlatformSection';
