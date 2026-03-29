@@ -30,6 +30,17 @@ const DTwinOSDetail = () => {
     }));
   };
 
+  const getCenterTitle = () => {
+    if (data.id === 'healthcare') return "DTwinOS\nHealthcare Twin\n(HDT)";
+    if (data.id === 'built-environment') return "DTwinOS\nBuilt Environment\n& Infrastructure";
+    if (data.id === 'energy-utilities') return "DTwinOS\nEnergy\n& Utilities";
+    if (data.id === 'industrial-manufacturing') return "DTwinOS\nIndustrial\n& Manufacturing";
+    if (data.id === 'transportation') return "DTwinOS\nTransportation\nDigital Twin";
+    if (data.id === 'urban-ecosystems') return "DTwinOS\nUrban\nEcosystems";
+    if (data.id === 'sustainability') return "DTwinOS\nSustainability\n& Net-Zero";
+    return `DTwinOS\n${data.title}`;
+  };
+
   return (
     <main>
       <Hero
@@ -50,8 +61,8 @@ const DTwinOSDetail = () => {
              <p className="text-slate-600 mt-2">Interactive overview of the {data.title} ecosystem</p>
           </div>
           <CircularDiagram 
-            centerTitle={data.title}
-            centerSubtitle="Ecosystem"
+            centerTitle={getCenterTitle()}
+            centerSubtitle={`${data.title} Ecosystem`}
             items={mapFeaturesToDiagramItems()}
           />
         </div>

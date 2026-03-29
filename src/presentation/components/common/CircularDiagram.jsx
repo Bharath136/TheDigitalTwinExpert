@@ -52,19 +52,20 @@ const CircularDiagram = ({ centerTitle, centerSubtitle, items }) => {
   const rightItems = displayItems.slice(5, 10);
 
   const getLineStyles = (isLeft, idx) => {
-    // Create futuristic angled pointing lines based on vertical position
+    // Mathematically refined angles to ensure lines hit the center of their respective wedges perfectly.
+    // Shallower angles (-18, -25, 0, 25, 18) prevent the overshoot "shift" reported on industrial pages.
     if (isLeft) {
-      if (idx === 0) return { width: 'clamp(50px, 8vw, 110px)', transform: 'rotate(28deg) translateY(-2px)', transformOrigin: 'left center' };
-      if (idx === 1) return { width: 'clamp(30px, 5vw, 70px)', transform: 'rotate(12deg)', transformOrigin: 'left center' };
-      if (idx === 2) return { width: 'clamp(20px, 3vw, 40px)', transform: 'rotate(0deg)', transformOrigin: 'left center' };
-      if (idx === 3) return { width: 'clamp(30px, 5vw, 70px)', transform: 'rotate(-12deg)', transformOrigin: 'left center' };
-      if (idx === 4) return { width: 'clamp(50px, 8vw, 110px)', transform: 'rotate(-28deg) translateY(2px)', transformOrigin: 'left center' };
+      if (idx === 0) return { width: 'clamp(90px, 12vw, 150px)', transform: 'rotate(-18deg) translateY(-1px)', transformOrigin: 'left center' };
+      if (idx === 1) return { width: 'clamp(55px, 8vw, 100px)', transform: 'rotate(-25deg)', transformOrigin: 'left center' };
+      if (idx === 2) return { width: 'clamp(25px, 4vw, 50px)', transform: 'rotate(0deg)', transformOrigin: 'left center' };
+      if (idx === 3) return { width: 'clamp(55px, 8vw, 100px)', transform: 'rotate(25deg)', transformOrigin: 'left center' };
+      if (idx === 4) return { width: 'clamp(90px, 12vw, 150px)', transform: 'rotate(18deg) translateY(1px)', transformOrigin: 'left center' };
     } else {
-      if (idx === 0) return { width: 'clamp(50px, 8vw, 110px)', transform: 'rotate(-28deg) translateY(-2px)', transformOrigin: 'right center' };
-      if (idx === 1) return { width: 'clamp(30px, 5vw, 70px)', transform: 'rotate(-12deg)', transformOrigin: 'right center' };
-      if (idx === 2) return { width: 'clamp(20px, 3vw, 40px)', transform: 'rotate(0deg)', transformOrigin: 'right center' };
-      if (idx === 3) return { width: 'clamp(30px, 5vw, 70px)', transform: 'rotate(12deg)', transformOrigin: 'right center' };
-      if (idx === 4) return { width: 'clamp(50px, 8vw, 110px)', transform: 'rotate(28deg) translateY(2px)', transformOrigin: 'right center' };
+      if (idx === 0) return { width: 'clamp(90px, 12vw, 150px)', transform: 'rotate(18deg) translateY(-1px)', transformOrigin: 'right center' };
+      if (idx === 1) return { width: 'clamp(55px, 8vw, 100px)', transform: 'rotate(25deg)', transformOrigin: 'right center' };
+      if (idx === 2) return { width: 'clamp(25px, 4vw, 50px)', transform: 'rotate(0deg)', transformOrigin: 'right center' };
+      if (idx === 3) return { width: 'clamp(55px, 8vw, 100px)', transform: 'rotate(-25deg)', transformOrigin: 'right center' };
+      if (idx === 4) return { width: 'clamp(90px, 12vw, 150px)', transform: 'rotate(-18deg) translateY(1px)', transformOrigin: 'right center' };
     }
   };
 
@@ -167,19 +168,30 @@ const CircularDiagram = ({ centerTitle, centerSubtitle, items }) => {
             ))}
           </div>
 
-          {/* CENTER HUB */}
-          <div className="absolute inset-0 m-auto w-[42%] h-[42%] rounded-full shadow-[0_10px_30px_rgba(0,0,0,0.3)] border-[6px] border-white overflow-hidden text-white z-30 transform transition-transform duration-500 hover:scale-[1.02]">
-            <img 
-              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=400&auto=format&fit=crop"
-              className="absolute inset-0 w-full h-full object-cover"
-              alt="Command Center"
-            />
-            {/* Dark gradient at the bottom so text is readable */}
-            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/95 via-blue-900/60 to-transparent"></div>
-            
-            <div className="absolute bottom-4 inset-x-0 px-2 flex flex-col items-center justify-end text-center">
-              <h3 className="font-bold text-[clamp(12px,1.5vw,18px)] leading-tight mb-0.5 max-w-[85%] mx-auto">{centerTitle}</h3>
-              {centerSubtitle && <p className="text-[clamp(9px,1vw,12px)] text-blue-200 leading-tight font-medium hidden sm:block">{centerSubtitle}</p>}
+          {/* CENTER HUB - White version with black text and blue branding */}
+          <div className="absolute inset-0 m-auto w-[42%] h-[42%] rounded-full shadow-[0_15px_40px_rgba(0,0,0,0.12)] border-[8px] border-white overflow-hidden bg-white text-slate-900 z-30 transform transition-transform duration-500 hover:scale-[1.03] flex items-center justify-center">
+            <div className="p-3 flex flex-col items-center justify-center text-center w-full h-full">
+              <div className="space-y-0.5">
+                {typeof centerTitle === 'string' && centerTitle.includes('\n') ? (
+                  centerTitle.split('\n').map((line, i) => (
+                    <h3 
+                      key={i} 
+                      className={`font-black uppercase tracking-tighter leading-tight ${i === 0 ? 'text-blue-600 text-[clamp(10px,1vw,14px)]' : 'text-slate-900 text-[clamp(11px,1.2vw,16px)]'}`}
+                    >
+                      {line}
+                    </h3>
+                  ))
+                ) : (
+                  <h3 className="font-black text-[clamp(13px,1.3vw,17px)] leading-tight uppercase tracking-tighter text-slate-900">
+                    {centerTitle}
+                  </h3>
+                )}
+                {centerSubtitle && (
+                  <p className="text-[clamp(9px,0.8vw,11px)] text-slate-500 leading-tight font-bold mt-1.5 uppercase tracking-widest opacity-80 border-t border-slate-100 pt-1 italic">
+                    {centerSubtitle}
+                  </p>
+                )}
+              </div>
             </div>
           </div>
         </div>
