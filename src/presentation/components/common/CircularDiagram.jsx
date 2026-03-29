@@ -107,10 +107,9 @@ const CircularDiagram = ({ centerTitle, centerSubtitle, items }) => {
   };
 
   return (
-    <div className="w-full py-12 lg:py-20 bg-slate-50 relative rounded-3xl my-8 overflow-hidden border border-blue-100/50">
-      {/* Soft Background Tech Grid/Glow */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#e0f2fe_1px,transparent_1px),linear-gradient(to_bottom,#e0f2fe_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)] opacity-20 pointer-events-none"></div>
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-50/30 to-white/50 pointer-events-none"></div>
+    <div className="w-full py-12 lg:py-20 bg-[url('/images/circuit-bg.svg')] bg-cover bg-center bg-blue-50/40 relative rounded-3xl my-8 overflow-hidden">
+      {/* Soft Background Glow */}
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-100/30 to-blue-50/50 pointer-events-none"></div>
 
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-12 lg:gap-4 relative z-10">
         
