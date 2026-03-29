@@ -1,7 +1,7 @@
 export const solutionsCapabilities = [
   {
     title: 'BIM & Digital Engineering',
-    image: '/images/solutions/bim-engineering.jpg',
+    image: '/images/solutions/1. BIM & Digital Engineering.png',
     features: [
       'BIM modeling and coordination',
       'Clash detection and design validation',
@@ -11,7 +11,7 @@ export const solutionsCapabilities = [
   },
   {
     title: 'Smart Construction Management',
-    image: '/images/solutions/smart-construction.jpg',
+    image: '/images/solutions/2. Smart Construction Management.png',
     features: [
       'Real-time construction progress tracking',
       'Quality, safety, and issue management',
@@ -20,7 +20,7 @@ export const solutionsCapabilities = [
   },
   {
     title: 'Digital Twin Operations',
-    image: '/images/solutions/digital-operations.jpg',
+    image: '/images/solutions/3. Digital Twin Operations.png',
     features: [
       'Live asset monitoring and visualization',
       'Facility performance dashboards',
@@ -30,7 +30,7 @@ export const solutionsCapabilities = [
   },
   {
     title: 'AI & Data Intelligence',
-    image: '/images/solutions/ai-data.jpg',
+    image: '/images/solutions/4. AI & Data Intelligence.png',
     features: [
       'Predictive analytics and forecasting',
       'AI-driven decision support',
@@ -40,7 +40,7 @@ export const solutionsCapabilities = [
   },
   {
     title: 'Interoperability & Integration',
-    image: '/images/solutions/interoperability.jpg',
+    image: '/images/solutions/5. Interoperability & Integration.png',
     features: [
       'Seamless integration with BIM, IoT, ERP, and enterprise systems',
       'Open data standards and API-based connectivity',
@@ -49,7 +49,7 @@ export const solutionsCapabilities = [
   },
   {
     title: 'Command & Control Centers',
-    image: '/images/solutions/control-centers.jpg',
+    image: '/images/solutions/6. Command & Control Centers.png',
     features: [
       'Centralized dashboards for real-time monitoring',
       'Multi-site and multi-project visibility',
@@ -58,18 +58,8 @@ export const solutionsCapabilities = [
     ]
   },
   {
-    title: 'Smart Infrastructure & Smart Cities',
-    image: '/images/solutions/smart-infrastructure.jpg',
-    features: [
-      'City-scale Digital Twin solutions',
-      'Infrastructure monitoring and optimization',
-      'Transportation and utility intelligence',
-      'Urban planning and simulation'
-    ]
-  },
-  {
     title: 'Healthcare Digital Twins',
-    image: '/images/solutions/healthcare-twins.jpg',
+    image: '/images/solutions/7. Healthcare Digital Twins.png',
     features: [
       'Hospital operational dashboards',
       'Patient and asset monitoring',
@@ -78,8 +68,18 @@ export const solutionsCapabilities = [
     ]
   },
   {
+    title: 'Smart Infrastructure & Smart Cities',
+    image: '/images/solutions/8. Smart Infrastructure & Smart Cities.png',
+    features: [
+      'City-scale Digital Twin solutions',
+      'Infrastructure monitoring and optimization',
+      'Transportation and utility intelligence',
+      'Urban planning and simulation'
+    ]
+  },
+  {
     title: 'Sustainability & Net-Zero Solutions',
-    image: '/images/solutions/sustainability-solutions.jpg',
+    image: '/images/solutions/9. Sustainability & Net-Zero Solutions.png',
     features: [
       'Carbon tracking and ESG reporting',
       'Energy optimization',
@@ -89,7 +89,7 @@ export const solutionsCapabilities = [
   },
   {
     title: 'Lifecycle Asset Management',
-    image: '/images/solutions/lifecycle-management.jpg',
+    image: '/images/solutions/10. Lifecycle Asset Management.png',
     features: [
       'End-to-end asset lifecycle tracking',
       'Design → Build → Operate integration',
