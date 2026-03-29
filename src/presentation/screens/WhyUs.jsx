@@ -12,9 +12,9 @@ const WhyUs = () => {
       <Hero
         title={
           <span style={{ display: 'block', textAlign: 'left' }}>
-            <span style={{ display: 'block', paddingLeft: '25%' }}>Why Partner</span>
-            <span style={{ display: 'block', paddingLeft: '36%' }}>With</span>
-            <span style={{ display: 'block', paddingLeft: '4%' }}>The Digital Twin Experts?</span>
+            <span style={{ display: 'block', paddingLeft: '30%' }}>Why Partner</span>
+            <span style={{ display: 'block', paddingLeft: '41%' }}>With</span>
+            <span style={{ display: 'block', paddingLeft: '9%' }}>The Digital Twin Experts?</span>
           </span>
         }
         image={aboutHeroImg}
