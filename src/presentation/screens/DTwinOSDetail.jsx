@@ -45,7 +45,7 @@ const DTwinOSDetail = () => {
     <main>
       <Hero
         title={data.title}
-        subtitle="DTwinOS Platform Solution"
+        subtitle="DTwinOS Solution"
         image={data.image}
         height="min-h-[50vh]"
       />
