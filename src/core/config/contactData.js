@@ -1,8 +1,8 @@
 export const contactData = {
   headquarters: {
-    address1: "123 Innovation Drive",
-    address2: "Tech City, TC 10010",
-    country: "United States"
+    address1: "1st Floor,Sai Krishna Tower,Uppal",
+    address2: "Hyderabad, Telangana",
+    pincode: 500039
   },
   phone: {
     name: "Kranthi Kumar",

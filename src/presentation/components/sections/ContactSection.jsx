@@ -9,8 +9,8 @@ const ContactSection = () => {
   return (
     <section className="py-20 md:py-24 bg-white">
       <Container>
-        <SectionHeader 
-          title="Get in Touch" 
+        <SectionHeader
+          title="Get in Touch"
           subtitle="Contact Us"
         />
 
@@ -18,7 +18,7 @@ const ContactSection = () => {
           {/* Contact Details */}
           <div className="bg-[var(--color-siemens-gray-100)] p-8 md:p-12 border-t-4 border-[var(--color-siemens-primary)] shadow-sm">
             <h3 className="text-2xl font-bold normal-case mb-12 text-center text-slate-800">Our Offices</h3>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12 normal-case">
               <div className="flex flex-col items-center text-center gap-4">
                 <div className="w-16 h-16 bg-white text-[var(--color-siemens-primary)] shadow-sm rounded-sm flex items-center justify-center shrink-0">
@@ -29,7 +29,7 @@ const ContactSection = () => {
                   <p className="text-slate-600 leading-relaxed">
                     {contactData.headquarters.address1}<br />
                     {contactData.headquarters.address2}<br />
-                    {contactData.headquarters.country}
+                    {contactData.headquarters.pincode}
                   </p>
                 </div>
               </div>
