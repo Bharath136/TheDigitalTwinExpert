@@ -5,6 +5,7 @@ export const dtwinosData = [
     subtitle: 'Transforming Healthcare into Intelligent, Connected Systems',
     description: 'DTwinOS enables intelligent healthcare ecosystems by connecting hospitals, medical equipment, and patient data into real-time digital twins for improved care, efficiency, and compliance.',
     image: '/images/unsplash/healthcare.jpg', // Placeholder image
+    twinFullTitle: 'Healthcare Twin (HDT)',
     features: [
       { title: 'Smart Hospital Design', desc: 'BIM-enabled planning for efficient, compliant, and future-ready healthcare facilities' },
       { title: 'Digital Construction Delivery', desc: 'Real-time tracking and coordination of hospital construction and medical systems' },
@@ -25,6 +26,7 @@ export const dtwinosData = [
     subtitle: 'Transforming Infrastructure into Intelligent, Connected Digital Twins',
     description: 'DTwinOS enables lifecycle management of buildings, airports, metro systems, and infrastructure through integrated BIM, IoT, and digital twins.',
     image: '/images/unsplash/built-environment.jpg',
+    twinFullTitle: 'Built Environment & Infrastructure Twin (BEIT)',
     features: [
       { title: 'BIM-Based Smart Design', desc: 'Intelligent 3D/4D/5D modeling ensures coordinated, data-driven infrastructure planning.' },
       { title: 'Digital Construction Planning', desc: '4D/5D simulations enable accurate scheduling, cost control, and execution planning.' },
@@ -45,6 +47,7 @@ export const dtwinosData = [
     subtitle: 'Transforming Transportation into Intelligent, Connected Systems',
     description: 'DTwinOS enables transportation networks—railways, airports, highways, and logistics corridors and intelligent asset management—to evolve into real-time, data-driven Digital Twins, improving safety, efficiency, capacity, and sustainability across the entire lifecycle.',
     image: '/images/unsplash/transportation.jpg',
+    twinFullTitle: 'Transportation Twin (TDT)',
     features: [
       { title: 'Smart Infrastructure Design', desc: 'BIM-based planning optimizes rail, airport, highway, and logistics systems.' },
       { title: 'Construction Tracking', desc: 'Digital tools monitor infrastructure development in real time.' },
@@ -65,6 +68,7 @@ export const dtwinosData = [
     subtitle: 'Powering Intelligent and Sustainable Energy Systems',
     description: 'DTwinOS enables smart energy ecosystems by digitizing power plants, grids, and renewable systems for efficient, resilient, and sustainable operations.',
     image: '/images/unsplash/energy.jpg',
+    twinFullTitle: 'Energy & Utilities Twin (EUT)',
     features: [
       { title: 'Energy Infrastructure Design', desc: 'Smart planning of power plants and grids improves efficiency and reliability.' },
       { title: 'Project Construction Monitoring', desc: 'Digital tools track progress of energy projects and installations.' },
@@ -85,6 +89,7 @@ export const dtwinosData = [
     subtitle: 'Transforming Factories into Intelligent, Self-Optimizing Systems',
     description: 'DTwinOS enables industrial facilities and manufacturing plants to evolve into real-time, data-driven Digital Twins, improving productivity, efficiency, quality, and sustainability across the entire production lifecycle.',
     image: '/images/unsplash/industrial.jpg',
+    twinFullTitle: 'Industrial & Manufacturing Twin (IMT)',
     features: [
       { title: 'Smart Factory Design', desc: 'Optimized layouts and workflows improve production efficiency.' },
       { title: 'Digital Facility Construction', desc: 'Real-time tracking ensures smooth plant setup and commissioning.' },
@@ -105,6 +110,7 @@ export const dtwinosData = [
     subtitle: 'Connected cities driven by real-time intelligence and automation.',
     description: 'DTwinOS powers smart cities by integrating infrastructure, mobility, utilities, public services, enabling smarter governance, enhanced quality of life into a unified digital ecosystem.',
     image: '/images/unsplash/smart-cities.jpg',
+    twinFullTitle: 'Urban Ecosystem Twin (UET)',
     features: [
       { title: 'Urban Planning & Design', desc: 'BIM and GIS integration enables efficient city development.' },
       { title: 'Infrastructure Development Tracking', desc: 'Real-time monitoring ensures timely delivery of city projects.' },
@@ -125,6 +131,7 @@ export const dtwinosData = [
     subtitle: 'Enabling Intelligent, Data-Driven Sustainable Systems',
     description: 'DTwinOS empowers organizations to achieve sustainability and net-zero goals by transforming assets and infrastructure into real-time Digital Twins—enabling precise monitoring, optimization, and reduction of environmental impact across the entire lifecycle.',
     image: '/images/unsplash/sustainability.jpg',
+    twinFullTitle: 'Sustainability & Net-Zero Twin (SZT)',
     features: [
       { title: 'Sustainable Design & Modeling', desc: 'Energy and carbon simulations optimize design decisions.' },
       { title: 'Green Construction Monitoring', desc: 'Tracking emissions and materials reduces environmental impact.' },

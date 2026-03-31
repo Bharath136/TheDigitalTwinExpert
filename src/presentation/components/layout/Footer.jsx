@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { FiTwitter, FiLinkedin, FiYoutube, FiFacebook } from 'react-icons/fi';
+import { FiTwitter, FiLinkedin, FiYoutube, FiFacebook, FiMapPin, FiPhone, FiMail } from 'react-icons/fi';
 import Container from './Container';
 import { contactData } from '@core/config/contactData';
 
@@ -54,11 +54,33 @@ const Footer = () => {
 
           {/* Contact Details */}
           <div>
-            <h4 className="text-white font-semibold mb-6">Contact</h4>
-            <ul className="space-y-3 text-sm">
-              <li>Global Communications</li>
-              <li className="mt-4"><a href={`mailto:${contactData.email.value}`} className="hover:text-white transition-colors text-[var(--color-siemens-primary)]">{contactData.email.display}</a></li>
-              <li><Link to="/contact" className="hover:text-white transition-colors text-[var(--color-siemens-primary)]">Get in Touch</Link></li>
+            <h4 className="text-white font-semibold mb-6">Contact Us</h4>
+            <ul className="space-y-4 text-sm">
+              <li className="flex gap-3">
+                <FiMapPin className="text-[var(--color-siemens-primary)] mt-1 flex-shrink-0" size={18} />
+                <span className="text-gray-400 leading-relaxed">
+                  {contactData.headquarters.address1}<br />
+                  {contactData.headquarters.address2}<br />
+                  {contactData.headquarters.pincode}
+                </span>
+              </li>
+              <li className="flex items-center gap-3">
+                <FiPhone className="text-[var(--color-siemens-primary)] flex-shrink-0" size={18} />
+                <a href={`tel:${contactData.phone.value}`} className="hover:text-white transition-colors text-gray-400">
+                  {contactData.phone.display}
+                </a>
+              </li>
+              <li className="flex items-center gap-3">
+                <FiMail className="text-[var(--color-siemens-primary)] flex-shrink-0" size={18} />
+                <a href={`mailto:${contactData.email.value}`} className="hover:text-white transition-colors text-gray-400">
+                  {contactData.email.display}
+                </a>
+              </li>
+              <li className="pt-2">
+                <Link to="/contact" className="inline-block py-2 px-4 border border-[var(--color-siemens-primary)] text-[var(--color-siemens-primary)] rounded hover:bg-[var(--color-siemens-primary)] hover:text-white transition-all duration-300 text-xs font-semibold">
+                  Get in Touch
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

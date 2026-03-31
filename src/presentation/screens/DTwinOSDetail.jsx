@@ -45,7 +45,14 @@ const DTwinOSDetail = () => {
     <main>
       <Hero
         title={data.title}
-        subtitle="DTwinOS Solution"
+        subtitle={
+          <div className="flex flex-col items-center">
+            <span className="text-xs md:text-sm tracking-[0.2em] text-slate-400 font-medium mb-2">Powered by</span>
+            <span className="text-lg md:text-2xl font-bold text-white tracking-wide">
+              DTwinOS {data.twinFullTitle}
+            </span>
+          </div>
+        }
         image={data.image}
         height="min-h-[50vh]"
       />
@@ -57,12 +64,12 @@ const DTwinOSDetail = () => {
       <section className="py-16 bg-white overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-             <h2 className="text-3xl font-bold text-slate-800">Core Capabilities</h2>
-             <p className="text-slate-600 mt-2">Interactive overview of the {data.title} ecosystem</p>
+            <h2 className="text-3xl font-bold text-slate-800">Core Capabilities</h2>
+            <p className="text-slate-600 mt-2">Interactive overview of the {data.title} ecosystem</p>
           </div>
-          <CircularDiagram 
+          <CircularDiagram
             centerTitle={getCenterTitle()}
-            centerSubtitle={`${data.title} Ecosystem`}
+            centerSubtitle={"Ecosystem"}
             items={mapFeaturesToDiagramItems()}
           />
         </div>
@@ -74,10 +81,10 @@ const DTwinOSDetail = () => {
           <h3 className="text-2xl font-bold text-center mb-8">Explore Other DTwinOS Solutions</h3>
           <div className="flex flex-wrap justify-center gap-4">
             {dtwinosData.filter(item => item.id !== id).map(item => (
-              <Link 
-                key={item.id} 
+              <Link
+                key={item.id}
                 to={`/dtwinos/${item.id}`}
-                className="px-6 py-3 bg-white text-slate-800 rounded-full font-medium shadow-sm hover:shadow-md hover:bg-blue-50 hover:text-blue-600 transition-all border border-slate-200"
+                className="px-6 py-3 bg-white text-slate-800 rounded-full font-medium shadow-sm hover:shadow-md hover:bg-blue-50 hover:text-blue-600 transition-all border border-slate-00"
               >
                 {item.title}
               </Link>
